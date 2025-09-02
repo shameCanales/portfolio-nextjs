@@ -1,9 +1,31 @@
+"use client";
+
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
+import ToggleMobileNav from "./ui/ToggleMobileNav";
+import Image from "next/image";
+import { Poppins } from "next/font/google";
+import { useSelector } from "react-redux";
+import type { RootState } from "@/lib/store/store";
+
+const poppins = Poppins({
+  weight: ["400", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function NavBar() {
+  const theme = useSelector((state: RootState) => state.theme.theme);
+  console.log(theme);
+
   return (
-    <div>
-      <ul>
+    <div
+      className={`flex justify-between items-center px-3 py-1 rounded-xs bg-[var(--color-card)] ${
+        theme === "dark" ? "border-[.5px] border-[rgba(255,255,255,.2)]" : ""
+      }`}
+    >
+      <p className={`${poppins.className} font-semibold text-xl`}>SC</p>
+      <ul className="hidden md:block">
         <li>
           <Link href="/">Home</Link>
         </li>
@@ -18,6 +40,18 @@ export default function NavBar() {
           <Link href="/about">About</Link>
         </li>
       </ul>
+      <div>
+        <ThemeToggle />
+        <ToggleMobileNav>
+          <Image
+            className="md:hidden"
+            src={`/${theme}-mode/menu.png`}
+            alt="toggle mobile menu"
+            width="16"
+            height="16"
+          />
+        </ToggleMobileNav>
+      </div>
     </div>
   );
 }
