@@ -1,0 +1,18 @@
+import Subheading from "../ui/Subheading";
+import MainParagraph from "../ui/MainParagraph";
+import TechFilterComponent from "../TechFilterComponent";
+
+export default function TechnicalSkills() {
+  return (
+    <div className="mt-18">
+      <Subheading>Technical Skills</Subheading>
+      <MainParagraph>
+        {`These are the technologies that i'm currently using on software
+        engineering and I'm eager to add more technologies to my skillset that
+        will make me a better software engineer and would potentially make me
+        stand out to the rest.`}
+      </MainParagraph>
+      <TechFilterComponent />
+    </div>
+  );
+}

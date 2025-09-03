@@ -3,5 +3,9 @@ export default function MainParagraph({
 }: {
   children: React.ReactNode;
 }) {
-  return <p className="font-medium text-xs leading-4.5 mt-4">{children}</p>;
+  return (
+    <p className="font-medium text-xs leading-4.5 mt-4 text-[var(--color-text)]">
+      {children}
+    </p>
+  );
 }

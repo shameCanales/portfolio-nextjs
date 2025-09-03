@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
 interface ContributionDay {
   date: string;
@@ -23,7 +23,7 @@ interface CalendarData {
 const GITHUB_USERNAME = "shameCanales";
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN; // private token, NOT NEXT_PUBLIC
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   if (!GITHUB_TOKEN) {
     return NextResponse.json(
       { error: "GitHub token missing" },
