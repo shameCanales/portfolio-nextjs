@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import MobileNav from "@/components/MobileNav";
 import ReduxProvider from "@/lib/providers/ReduxProvider";
+import TanstackProvider from "@/lib/providers/TanstackProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,11 +26,13 @@ export default function RootLayout({
     <html lang="en" className="m-0 p-0">
       <body>
         <ReduxProvider>
-          <MobileNav />
-          <div className={`${inter.className}  antialiased mx-5 my-4.5`}>
-            <NavBar />
-            {children}
-          </div>
+          <TanstackProvider>
+            <MobileNav />
+            <div className={`${inter.className}  antialiased mx-5 my-4.5`}>
+              <NavBar />
+              {children}
+            </div>
+          </TanstackProvider>
         </ReduxProvider>
       </body>
     </html>

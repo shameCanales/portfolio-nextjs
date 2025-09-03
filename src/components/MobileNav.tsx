@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import ToggleMobileNav from "./ui/ToggleMobileNav";
+import ToggleMobileNav from "./ToggleMobileNav";
 import { useSelector, useDispatch } from "react-redux";
 import type { RootState, AppDispatch } from "@/lib/store/store";
 import { uiActions } from "@/lib/store/ui-slice";
