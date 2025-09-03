@@ -65,7 +65,7 @@ export default function GithubStats() {
 
   return (
     <div
-      className="overflow-x-auto font-mono text-sm bg-[#07061B] p-4 sm:p-5 lg:py-10 rounded-2xl sm:rounded-3xl md:rounded-4xl mt-6 2xl:mt-8 md:max-w-[834px] mx-auto"
+      className="overflow-x-auto font-mono text-sm bg-[#030303] p-4 sm:p-5 lg:py-10 rounded-2xl sm:rounded-3xl md:rounded-4xl mt-6 2xl:mt-8 md:max-w-[834px] mx-auto"
       ref={gridRef}
     >
       <div className="flex space-x-[2.2px] ml-10 mb-1.5 w-max">

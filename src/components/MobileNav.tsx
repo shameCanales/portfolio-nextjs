@@ -69,7 +69,7 @@ export default function MobileNav() {
           animate="visible"
           exit="exit"
           variants={containerVariants}
-          className="md:hidden fixed top-0 w-full h-full bg-[rgba(17,17,17,0.76)] backdrop-blur-xs pt-8 text-center flex flex-col z-[99]"
+          className="md:hidden fixed top-0 w-full h-full bg-[rgba(17,17,17,0.76)] backdrop-blur-sm pt-8 text-center flex flex-col z-[99]"
         >
           <div className="text-right mr-7">
             <ToggleMobileNav>
