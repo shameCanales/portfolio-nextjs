@@ -104,7 +104,7 @@ export default function FeatureProjectsCarousel() {
   return (
     <div
       ref={containerRef}
-      className="flex items-center justify-center w-full h-135 relative overflow-hidden"
+      className="flex items-center justify-center w-full h-135 relative overflow-hidden z-1"
     >
       {featuredProjects.map((project, index) => {
         const isCenter = index === current;
@@ -116,9 +116,13 @@ export default function FeatureProjectsCarousel() {
           <motion.div
             key={project.id}
             animate={{ x: offset, scale: isCenter ? 1 : 0.7 }}
-            transition={{ type: "spring", stiffness: 200, damping: 25, mass: 0.8 }}
+            transition={{
+              type: "spring",
+              stiffness: 200,
+              damping: 25,
+              mass: 0.8,
+            }}
             className={`
-              
                flex items-center justify-center h-auto
                shadow-lg cursor-pointer
             `}

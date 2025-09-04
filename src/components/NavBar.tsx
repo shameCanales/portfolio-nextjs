@@ -20,7 +20,7 @@ export default function NavBar() {
 
   return (
     <div
-      className={`sticky top-4.5 z-51 shadow-md flex justify-between items-center px-3 py-1 rounded-xs backdrop-blur-xs bg-[var(--color-card)] ${
+      className={`sticky top-4.5 z-2 shadow-md flex justify-between items-center px-3 py-1 rounded-xs backdrop-blur-xs bg-[var(--color-card)] ${
         theme === "dark" ? "border-[.5px] border-[rgba(255,255,255,.2)]" : ""
       }`}
     >

@@ -50,7 +50,7 @@ export default function FeaturedProjectItem({ project }: { project: Project }) {
 
   return (
     <div
-      className={`absolute cursor-pointer w-[260px] backdrop-blur-md bg-[var(--color-card)] rounded-lg p-3.5 text-left ${
+      className={`absolute cursor-pointer w-[260px] backdrop-blur-md bg-[var(--color-card)] rounded-lg p-3.5 text-left  ${
         theme === "dark" ? "border-[0.5px] border-[var(--color-card)]" : ""
       }`}
     >
