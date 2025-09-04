@@ -5,13 +5,13 @@ export default function Introduction() {
   return (
     <div>
       <div className="text mt-16 sm:mt-7 md:mt-8 lg:mt-12 2xl:mt-20">
-        <MainHeading>Hi! I'm Shame.</MainHeading>
+        <MainHeading>Hi! I&apos;m Shame.</MainHeading>
         <MainParagraph>
-          I’m a fresh IT graduate and self-taught developer passionate about
+          I&apos;m a fresh IT graduate and self-taught developer passionate about
           turning ideas into interactive, user-friendly web experiences. With
-          certifications in React, JavaScript, HTML, CSS, and UI/UX design, I’ve
+          certifications in React, JavaScript, HTML, CSS, and UI/UX design, I&apos;ve
           built a strong foundation for creating clean, component-driven
-          interfaces that perform beautifully across devices. Currently, I’m
+          interfaces that perform beautifully across devices. Currently, I&apos;m
           focused on mastering frontend development with React, Next.js,
           Tailwind CSS, Redux Toolkit, and TanStack Query, while also exploring
           backend technologies to become a well-rounded developer.
