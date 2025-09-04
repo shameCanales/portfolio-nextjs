@@ -69,7 +69,7 @@ export default function MobileNav() {
           animate="visible"
           exit="exit"
           variants={containerVariants}
-          className="md:hidden fixed top-0 w-full h-full bg-[rgba(17,17,17,0.76)] backdrop-blur-sm pt-8 text-center flex flex-col z-[99]"
+          className="md:hidden fixed top-0 w-full h-full bg-[rgba(17,17,17,0.56)] backdrop-blur-sm pt-8 text-center flex flex-col z-[99]"
         >
           <div className="text-right mr-7">
             <ToggleMobileNav>
@@ -89,8 +89,8 @@ export default function MobileNav() {
                 variants={linkVariants}
                 className={`mt-8 ${
                   pathname === link.route
-                    ? "font-bold text-[var(--color-text)]"
-                    : "text-[var(--color-text-secondary)]"
+                    ? "font-bold text-[#FFFFFF]"
+                    : "text-[#C3C3C3]"
                 }`}
               >
                 <Link href={link.route}>{link.label}</Link>
