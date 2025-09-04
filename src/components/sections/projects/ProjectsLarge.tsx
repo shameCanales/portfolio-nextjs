@@ -93,7 +93,9 @@ const featuredProjects: Project[] = [
 export default function FeatureProjectsCarousel() {
   const theme = useSelector((state: RootState) => state.theme.theme);
   const [current, setCurrent] = useState(0);
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  // Ref for cards
+  const cardRefs = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -107,12 +109,15 @@ export default function FeatureProjectsCarousel() {
       { threshold: 0.6 }
     );
 
-    cardRefs.current.forEach((card) => {
+    // Capture current refs in local variable for cleanup safety
+    const currentCards = cardRefs.current;
+
+    currentCards.forEach((card) => {
       if (card) observer.observe(card);
     });
 
     return () => {
-      cardRefs.current.forEach((card) => {
+      currentCards.forEach((card) => {
         if (card) observer.unobserve(card);
       });
     };
@@ -122,66 +127,61 @@ export default function FeatureProjectsCarousel() {
 
   return (
     <div className="hidden lg:block">
-      <div className="flex w-full mt-12 gap-8 px-4 ">
-        {/* Cards list (scrolls globally with page) */}
-        <div className="flex flex-col gap-12 w-1/2 pb-40">
+      <div className="flex w-full mt-12 gap-12 px-6 xl:px-24">
+        {/* Cards list */}
+        <div className="flex flex-col gap-12 w-full xl:w-1/2 pb-40">
           {featuredProjects.map((project, index) => (
             <div
               key={project.id}
-              ref={(el) => (cardRefs.current[index] = el)}
+              ref={(el) => {
+                if (el) cardRefs.current[index] = el; // Safe assignment
+              }}
               data-index={index}
-              className="w-[320px] aspect-square bg-gray-800 rounded-xl shadow-lg overflow-hidden"
+              className="w-full sm:w-[400px] lg:w-[480px] xl:w-[520px] aspect-square bg-gray-800 dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden mx-auto"
             >
               <Image
                 src={project.src}
                 alt={project.title}
-                width={320}
-                height={320}
+                width={520}
+                height={520}
                 className="w-full h-full object-cover"
               />
             </div>
           ))}
         </div>
 
-        {/* Info panel (sticky on the right) */}
-        <div className="w-1/2 sticky top-24 self-start h-fit">
+        {/* Info panel */}
+        <div className="w-full xl:w-1/2 sticky top-24 self-start">
           <h2
-            className={`text-2xl font-bold text-[var(--color-text)] ${poppins.className}`}
+            className={`text-3xl xl:text-4xl font-extrabold text-[var(--color-text)] ${poppins.className}`}
           >
             {activeProj.title}
           </h2>
           <p
-            className={`mt-2 text-sm text-[var(--color-text-secondary)] ${outfit.className}`}
+            className={`mt-4 text-base xl:text-lg text-[var(--color-text-secondary)] ${outfit.className}`}
           >
             {activeProj.description}
           </p>
 
-          <ul className="mt-4 space-y-2">
+          <ul className="mt-6 space-y-3">
             {activeProj.features.map((feat, i) => (
-              <li key={i} className="flex items-start gap-2">
-                <Image
-                  src="/checklist.png"
-                  alt="check"
-                  width={18}
-                  height={18}
-                />
-                <p className={`text-sm ${outfit.className}`}>{feat}</p>
+              <li key={i} className="flex items-start gap-3">
+                <Image src="/checklist.png" alt="check" width={20} height={20} />
+                <p className={`text-base ${outfit.className}`}>{feat}</p>
               </li>
             ))}
           </ul>
 
-          <ul className="flex flex-wrap gap-2 mt-6">
+          <ul className="flex flex-wrap gap-3 mt-6">
             {activeProj.techstack.map((tech) => (
               <li
                 key={tech.name}
-                className={`flex items-center gap-2 bg-[var(--color-card)] px-2 py-1 rounded ${
-                  theme === "dark"
-                    ? "border border-[rgba(255,255,255,0.2)]"
-                    : ""
+                className={`flex items-center gap-2 bg-[var(--color-card)] px-3 py-1.5 rounded-full text-sm font-semibold ${
+                  theme === "dark" ? "border border-[rgba(255,255,255,0.2)]" : ""
                 }`}
               >
-                <Image src={tech.src} alt={tech.name} width={14} height={14} />
-                <span className="text-xs font-semibold">{tech.name}</span>
+                <Image src={tech.src} alt={tech.name} width={16} height={16} />
+                <span>{tech.name}</span>
               </li>
             ))}
           </ul>
