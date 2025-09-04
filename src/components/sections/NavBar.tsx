@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import ThemeToggle from "./ThemeToggle";
-import ToggleMobileNav from "./ToggleMobileNav";
+import ThemeToggle from "../ThemeToggle";
+import ToggleMobileNav from "../ToggleMobileNav";
 import Image from "next/image";
 import { Poppins } from "next/font/google";
 import { useSelector } from "react-redux";

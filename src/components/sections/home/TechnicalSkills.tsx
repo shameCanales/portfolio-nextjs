@@ -1,6 +1,6 @@
-import Subheading from "../ui/Subheading";
-import MainParagraph from "../ui/MainParagraph";
-import TechFilterComponent from "../TechFilterComponent";
+import MainParagraph from "@/components/ui/MainParagraph";
+import TechFilterComponent from "@/components/TechFilterComponent";
+import Subheading from "@/components/ui/Subheading";
 
 export default function TechnicalSkills() {
   return (

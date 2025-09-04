@@ -40,7 +40,7 @@ const featuredProjects: Project[] = [
   {
     id: 2,
     src: "/projects/WebDesignUdemy.jpg",
-    title: "Fakestore App",
+    title: "Fakestore App 2",
     description:
       "Built frontend for FakeStore App and integrated the Fakestore Platzi API.",
     features: [
@@ -61,16 +61,16 @@ const featuredProjects: Project[] = [
   {
     id: 3,
     src: "/projects/WebDesignUdemy.jpg",
-    title: "Fakestore App",
+    title: "Fakestore App 3",
     description:
-      "Built frontend for FakeStore App and integrated the Fakestore Platzi API.",
+      "Built frontend for FakeStore App and integrated the Fakestore Platzi API. 3",
     features: [
-      "Implemented component-based architecture",
+      "Implemented component-based architecture 3",
       "Used tailwind classes to style components",
       "Used Redux Toolkit to manage global state.",
     ],
     techUsed: [
-      "React JS",
+      "React JS 3",
       "Tailwind CSS",
       "Redux Toolkit",
       "React Router V7",

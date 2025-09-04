@@ -1,6 +1,6 @@
-import MainHeading from "../ui/MainHeading";
-import ExperienceItem from "../ExperienceItem";
-import SectionSubheading from "../ui/SectionSubheading";
+import MainHeading from "../../ui/MainHeading";
+import ExperienceItem from "../../ExperienceItem";
+import SectionSubheading from "../../ui/SectionSubheading";
 
 export const experiences = [
   {

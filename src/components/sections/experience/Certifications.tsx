@@ -1,6 +1,6 @@
-import MainHeading from "../ui/MainHeading";
-import MainParagraph from "../ui/MainParagraph";
-import CertificationItem from "../CertificationItem";
+import MainHeading from "../../ui/MainHeading";
+import MainParagraph from "../../ui/MainParagraph";
+import CertificationItem from "../../CertificationItem";
 
 const certificationsData = [
   {

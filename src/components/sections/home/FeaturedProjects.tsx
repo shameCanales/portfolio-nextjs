@@ -1,6 +1,5 @@
-import Subheading from "../ui/Subheading";
-import FeatureProjectsCarousel from "../FeatureProjectsCarousel";
-import FeaturedProjectItem from "../FeauredProjectItem";
+import Subheading from "../../ui/Subheading";
+import FeatureProjectsCarousel from "../../FeatureProjectsCarousel";
 
 export default function FeaturedProjects() {
   return (

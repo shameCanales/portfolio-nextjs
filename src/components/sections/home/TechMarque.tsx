@@ -1,4 +1,4 @@
-import MarqueeRow from "../MarqueRow";
+import MarqueeRow from "../../MarqueRow";
 
 const items1 = [
   {
