@@ -119,88 +119,96 @@ export default function FeatureProjectsCarousel() {
   const activeProj = featuredProjects[current];
 
   return (
-    <div className=" flex-col items-center w-full mt-8">
-      <div className="relative flex w-full overflow-hidden h-[180px] md:h-[280px]">
-        {featuredProjects.map((project, index) => {
-          const isCenter = index === current;
-          const offset = (index - current) * 230; // card width + gap
+    <div className="lg:hidden">
+      <div className=" flex-col items-center w-full mt-8">
+        <div className="relative flex w-full overflow-hidden h-[180px] md:h-[280px]">
+          {featuredProjects.map((project, index) => {
+            const isCenter = index === current;
+            const offset = (index - current) * 230; // card width + gap
 
-          return (
-            <motion.div
-              key={project.id}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={0.2}
-              onDragEnd={handleDragEnd}
-              onClick={() => setCurrent(index)} // 🔥 CLICK to select
-              animate={{
-                x: offset,
-                scale: isCenter ? 1 : 0.8,
-                opacity: isCenter ? 1 : 0.5,
-              }}
-              transition={{ type: "spring", stiffness: 200, damping: 25 }}
-              className={`absolute top-0 left-1/2 -translate-x-1/2 cursor-pointer`}
-              style={{ zIndex: isCenter ? 10 : 5 }}
-            >
-              <div
-                className={`w-[240px] aspect-video bg-gray-800 rounded-xl shadow-lg p-2 ${
-                  isCenter ? "border-2 z-[0]" : "z-[-5]"
+            return (
+              <motion.div
+                key={project.id}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.2}
+                onDragEnd={handleDragEnd}
+                onClick={() => setCurrent(index)} // 🔥 CLICK to select
+                animate={{
+                  x: offset,
+                  scale: isCenter ? 1 : 0.8,
+                  opacity: isCenter ? 1 : 0.5,
+                }}
+                transition={{ type: "spring", stiffness: 200, damping: 25 }}
+                className={`absolute top-0 left-1/2 -translate-x-1/2 cursor-pointer`}
+                style={{ zIndex: isCenter ? 10 : 5 }}
+              >
+                <div
+                  className={`w-[240px] aspect-video bg-gray-800 rounded-xl shadow-lg p-2 ${
+                    isCenter ? "border-2 z-[0]" : "z-[-5]"
+                  }`}
+                >
+                  <Image
+                    src={project.src}
+                    alt={project.title}
+                    width={240}
+                    height={160}
+                    className="rounded-lg object-cover"
+                  />
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        <div className="mt-4">
+          <p
+            className={` font-bold text-base text-[var(--color-text)] ${poppins.className}`}
+          >
+            {activeProj.title}
+          </p>
+          <p
+            className={`text-xs mt-1.5 font-normal leading-4.5 text-[var(--color-text-secondary)] ${outfit.className}`}
+          >
+            {activeProj.description}
+          </p>
+
+          <ul className="mt-4">
+            {activeProj.features.map((feat, index) => (
+              <li key={index} className="flex items-start gap-2 mt-1">
+                <Image
+                  src="/checklist.png"
+                  alt="checklist icon"
+                  width="20"
+                  height="20"
+                />
+                <p
+                  className={`text-xs leading-4.5 mt-[2px] font-normal ${outfit.className}`}
+                >
+                  {feat}
+                </p>
+              </li>
+            ))}
+          </ul>
+
+          <ul className="flex content-start flex-wrap gap-1.5 justify-start h-[130px] mt-5">
+            {activeProj.techstack.map((tech) => (
+              <li
+                key={tech.name}
+                className={`flex items-center gap-2 bg-[var(--color-card)] px-2 py-1 rounded-sm ${
+                  theme === "dark"
+                    ? "border-[0.5px] border-[rgba(255,255,255,0.29)]"
+                    : ""
                 }`}
               >
-                <Image
-                  src={project.src}
-                  alt={project.title}
-                  width={240}
-                  height={160}
-                  className="rounded-lg object-cover"
-                />
-              </div>
-            </motion.div>
-          );
-        })}
-      </div>
-
-      <div className="mt-4">
-        <p
-          className={` font-bold text-base text-[var(--color-text)] ${poppins.className}`}
-        >
-          {activeProj.title}
-        </p>
-        <p
-          className={`text-xs mt-1.5 font-normal leading-4.5 text-[var(--color-text-secondary)] ${outfit.className}`}
-        >
-          {activeProj.description}
-        </p>
-
-        <ul className="mt-4">
-          {activeProj.features.map((feat, index) => (
-            <li key={index} className="flex items-start gap-2 mt-1">
-              <Image
-                src="/checklist.png"
-                alt="checklist icon"
-                width="20"
-                height="20"
-              />
-              <p className={`text-xs leading-4.5 mt-[2px] font-normal ${outfit.className}`}>{feat}</p>
-            </li>
-          ))}
-        </ul>
-
-        <ul className="flex content-start flex-wrap gap-1.5 justify-start h-[130px] mt-5">
-          {activeProj.techstack.map((tech) => (
-            <li
-              key={tech.name}
-              className={`flex items-center gap-2 bg-[var(--color-card)] px-2 py-1 rounded-sm ${
-                theme === "dark"
-                  ? "border-[0.5px] border-[rgba(255,255,255,0.29)]"
-                  : ""
-              }`}
-            >
-              <Image src={tech.src} alt={tech.name} width={14} height={14} />
-              <p className={`text-[10px] font-semibold ${outfit.className}`}>{tech.name}</p>
-            </li>
-          ))}
-        </ul>
+                <Image src={tech.src} alt={tech.name} width={14} height={14} />
+                <p className={`text-[10px] font-semibold ${outfit.className}`}>
+                  {tech.name}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

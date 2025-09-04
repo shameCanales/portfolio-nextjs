@@ -1,4 +1,5 @@
 import Projects from "@/components/sections/projects/Projects";
+import ProjectsLarge from "@/components/sections/projects/ProjectsLarge";
 import MainHeading from "@/components/ui/MainHeading";
 import SectionSubheading from "@/components/ui/SectionSubheading";
 
@@ -10,6 +11,7 @@ export default function ProjectsPage() {
         That helped to become what I am today.
       </SectionSubheading>
       <Projects />
+      <ProjectsLarge />
     </div>
   );
 }

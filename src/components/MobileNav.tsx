@@ -82,7 +82,7 @@ export default function MobileNav() {
             </ToggleMobileNav>
           </div>
 
-          <motion.ul className="mt-[50%]">
+          <motion.ul className="mt-10">
             {links.map((link) => (
               <motion.li
                 key={link.route}
