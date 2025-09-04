@@ -1,7 +1,11 @@
+import Experience from "@/components/sections/Experience";
+import Certification from "@/components/sections/Certifications";
+
 export default function ExperiencePage() {
   return (
     <div>
-      <h1>This is Experience page</h1>
+      <Experience />
+      <Certification />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import DownLoadResumeButton from "@/components/DownloadResumeButton";
 import SeeMyWorkButton from "@/components/SeeMyWorkButton";
+import { Inter } from "next/font/google";
 
 const inter = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
