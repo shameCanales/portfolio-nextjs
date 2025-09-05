@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useSelector } from "react-redux";
 import { RootState } from "@/lib/store/store";
 import { Poppins, Outfit } from "next/font/google";
+import TechItemProject from "@/components/ui/TechItemProject";
 
 const poppins = Poppins({
   weight: ["700", "800", "900"],
@@ -36,7 +37,28 @@ const featuredProjects: Project[] = [
   {
     id: 1,
     src: "/projects/WebDesignUdemy.jpg",
-    title: "Fakestore React App",
+    title: "Fakestore App",
+    description:
+      "A modern e-commerce platform built with React that simulates real-world shopping experiences using the FakeStore API. Designed with performance, scalability, and user experience in mind, it showcases advanced state management, routing, and UI techniques.",
+    features: [
+      "Implemented dynamic product browsing with search, filtering, and category-based navigation.",
+      "Developed Role-based authentication with protected routes for admin and customer.",
+      "Enhanced product display using an interactive image carousel and pagination.",
+      "Improved user engagement with responsive UI, toast notifications, and smooth navigation.",
+    ],
+    techstack: [
+      { name: "React 1", src: "/logos/reactjs.png" },
+      { name: "React 2", src: "/logos/reactjs.png" },
+      { name: "React 3", src: "/logos/reactjs.png" },
+      { name: "React 4", src: "/logos/reactjs.png" },
+      { name: "React 5", src: "/logos/reactjs.png" },
+      { name: "React 6", src: "/logos/reactjs.png" },
+    ],
+  },
+  {
+    id: 2,
+    src: "/projects/WebDesignUdemy.jpg",
+    title: "Fakestore React App 2",
     description:
       "A modern e-commerce platform built with React that simulates real-world shopping experiences using the FakeStore API. Designed with performance, scalability, and user experience in mind, it showcases advanced state management, routing, and UI techniques.",
     features: [
@@ -56,9 +78,9 @@ const featuredProjects: Project[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     src: "/projects/WebDesignUdemy.jpg",
-    title: "Fakestore App 2",
+    title: "Fakestore App 3",
     description:
       "Another advanced project demonstrating e-commerce features with real-world best practices in React.",
     features: [
@@ -73,9 +95,9 @@ const featuredProjects: Project[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     src: "/projects/WebDesignUdemy.jpg",
-    title: "Fakestore App 3",
+    title: "Fakestore App 4",
     description:
       "Enhanced version with more features like image carousel, pagination, and responsive UI.",
     features: [
@@ -86,6 +108,27 @@ const featuredProjects: Project[] = [
     techstack: [
       { name: "React 1", src: "/logos/reactjs.png" },
       { name: "React 2", src: "/logos/reactjs.png" },
+    ],
+  },
+  {
+    id: 5,
+    src: "/projects/WebDesignUdemy.jpg",
+    title: "Fakestore App",
+    description:
+      "A modern e-commerce platform built with React that simulates real-world shopping experiences using the FakeStore API. Designed with performance, scalability, and user experience in mind, it showcases advanced state management, routing, and UI techniques.",
+    features: [
+      "Implemented dynamic product browsing with search, filtering, and category-based navigation.",
+      "Developed Role-based authentication with protected routes for admin and customer.",
+      "Enhanced product display using an interactive image carousel and pagination.",
+      "Improved user engagement with responsive UI, toast notifications, and smooth navigation.",
+    ],
+    techstack: [
+      { name: "React 1", src: "/logos/reactjs.png" },
+      { name: "React 2", src: "/logos/reactjs.png" },
+      { name: "React 3", src: "/logos/reactjs.png" },
+      { name: "React 4", src: "/logos/reactjs.png" },
+      { name: "React 5", src: "/logos/reactjs.png" },
+      { name: "React 6", src: "/logos/reactjs.png" },
     ],
   },
 ];
@@ -106,10 +149,9 @@ export default function FeatureProjectsCarousel() {
           setCurrent(idx);
         }
       },
-      { threshold: 0.6 }
+      { threshold: 1 }
     );
 
-    // Capture current refs in local variable for cleanup safety
     const currentCards = cardRefs.current;
 
     currentCards.forEach((card) => {
@@ -127,23 +169,28 @@ export default function FeatureProjectsCarousel() {
 
   return (
     <div className="hidden lg:block">
-      <div className="flex w-full mt-12 gap-12 px-6 xl:px-24">
+      <div className="grid grid-cols-2 w-full mt-12 gap-12 px-6">
         {/* Cards list */}
-        <div className="flex flex-col gap-12 w-full xl:w-1/2 pb-40">
+        <div className="flex flex-col gap-15 w-full pb-40">
           {featuredProjects.map((project, index) => (
             <div
               key={project.id}
               ref={(el) => {
-                if (el) cardRefs.current[index] = el; // Safe assignment
+                if (el) cardRefs.current[index] = el;
               }}
               data-index={index}
-              className="w-full sm:w-[400px] lg:w-[480px] xl:w-[520px] aspect-square bg-gray-800 dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden mx-auto"
+              className={`w-full lg:w-[350px] aspect-square rounded-2xl overflow-hidden mx-auto transition-shadow duration-300
+                ${
+                  index === current
+                    ? "shadow-[0_0_25px_rgba(59,130,246,0.7)] border-2 border-blue-500"
+                    : "shadow-lg bg-gray-800 dark:bg-gray-700"
+                }`}
             >
               <Image
                 src={project.src}
                 alt={project.title}
-                width={520}
-                height={520}
+                width={420}
+                height={420}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -151,38 +198,38 @@ export default function FeatureProjectsCarousel() {
         </div>
 
         {/* Info panel */}
-        <div className="w-full xl:w-1/2 sticky top-24 self-start">
+        <div className="w-full sticky top-24 self-start">
           <h2
-            className={`text-3xl xl:text-4xl font-extrabold text-[var(--color-text)] ${poppins.className}`}
+            className={`text-xl font-bold text-[var(--color-text)] ${poppins.className}`}
           >
             {activeProj.title}
           </h2>
           <p
-            className={`mt-4 text-base xl:text-lg text-[var(--color-text-secondary)] ${outfit.className}`}
+            className={`mt-2 text-sm leading-normal text-[var(--color-text-secondary)] ${outfit.className}`}
           >
             {activeProj.description}
           </p>
 
-          <ul className="mt-6 space-y-3">
+          <ul className="mt-3 space-y-3">
             {activeProj.features.map((feat, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <Image src="/checklist.png" alt="check" width={20} height={20} />
-                <p className={`text-base ${outfit.className}`}>{feat}</p>
+              <li key={i} className="flex items-start gap-2">
+                <Image
+                  className="mt-0.5"
+                  src="/checklist.png"
+                  alt="check"
+                  width={20}
+                  height={20}
+                />
+                <p className={`text-sm leading-normal ${outfit.className}`}>
+                  {feat}
+                </p>
               </li>
             ))}
           </ul>
 
           <ul className="flex flex-wrap gap-3 mt-6">
             {activeProj.techstack.map((tech) => (
-              <li
-                key={tech.name}
-                className={`flex items-center gap-2 bg-[var(--color-card)] px-3 py-1.5 rounded-full text-sm font-semibold ${
-                  theme === "dark" ? "border border-[rgba(255,255,255,0.2)]" : ""
-                }`}
-              >
-                <Image src={tech.src} alt={tech.name} width={16} height={16} />
-                <span>{tech.name}</span>
-              </li>
+              <TechItemProject key={tech.name} tech={tech} />
             ))}
           </ul>
         </div>

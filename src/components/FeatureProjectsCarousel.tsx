@@ -105,10 +105,18 @@ export default function FeatureProjectsCarousel() {
 
   useEffect(() => {
     const updateOffset = () => {
-      if (window.innerWidth <= 639) {
+      if (window.innerWidth < 640) {
         setCardOffset(230); // mobile
-      } else if (window.innerWidth <= 767) {
+        setCurrent(1);
+      } else if (window.innerWidth < 768) {
         setCardOffset(300); //sm
+        setCurrent(1);
+      } else if (window.innerWidth < 1024) {
+        setCardOffset(300);
+        setCurrent(1);
+      } else if (window.innerWidth < 1280){
+        setCardOffset(350);
+        setCurrent(1)
       }
     };
 
@@ -120,7 +128,7 @@ export default function FeatureProjectsCarousel() {
   return (
     <div
       ref={containerRef}
-      className="flex items-center justify-center w-full h-135 relative overflow-hidden z-1"
+      className="flex items-center justify-center w-full h-135 lg:h-140 relative overflow-hidden z-1 lg:mt-3"
     >
       {featuredProjects.map((project, index) => {
         const isCenter = index === current;

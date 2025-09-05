@@ -17,6 +17,7 @@ export default function HeroSocialsItem({ item }: { item: SocialsProps }) {
     <li key={item.filename}>
       <a href={item.href}>
         <Image
+          className="lg:w-[34px]"
           src={`/${theme === "dark" ? "dark" : "light"}-mode/footer-socials/${
             item.filename
           }`}

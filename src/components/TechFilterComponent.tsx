@@ -78,14 +78,13 @@ export default function TechFilterComponent() {
       : techStack.filter((t) => t.category === selectedCategory);
 
   return (
-    <div className="w-full mt-5">
-      {/* Selection Bar (Scrollable Menu) */}
-      <div className="flex overflow-x-auto gap-5 sm:gap-8 justify-center py-2 scrollbar-hide mx-[-20px] md:mx-[-48px] sm:mx-[-32px] px-4 bg-[var(--color-card)]">
+    <div className="w-full mt-5 lg:mb-35">
+      <div className="flex overflow-x-auto gap-5 sm:gap-8 lg:gap-14 lg:rounded-xl justify-center py-2 scrollbar-hide mx-[-20px] md:mx-[-48px] sm:mx-[-32px] lg:mx-0 px-4 bg-[var(--color-card)]">
         {categories.map((cat) => (
           <button
             key={cat.name}
             onClick={() => setSelectedCategory(cat.name)}
-            className={`whitespace-nowrap  rounded-md text-xs md:text-sm transition-colors
+            className={`whitespace-nowrap  rounded-md text-xs md:text-sm lg:text-base transition-colors
               ${
                 selectedCategory === cat.name
                   ? "bg-[var(--color-bg)] text-[var(--color-text)] px-6 py-2 font-medium"
@@ -97,21 +96,28 @@ export default function TechFilterComponent() {
         ))}
       </div>
 
-      {/* Tech List (Side-by-side flex items) */}
-      <div className="flex content-start flex-wrap gap-3 pt-8 justify-center h-[370px] sm:h-[260px]">
-        {filteredTechs.map((tech) => (
-          <div
-            key={tech.name}
-            className={`flex items-center gap-2 bg-[var(--color-card)] px-2 py-2 rounded-sm ${
-              theme === "dark"
-                ? "border-[0.5px] border-[rgba(255,255,255,0.29)]"
-                : ""
-            }`}
-          >
-            <Image src={tech.iconsrc} alt={tech.name} width={14} height={14} />
-            <p className="text-xs font-medium">{tech.name}</p>
-          </div>
-        ))}
+      <div className="bg-[#050B20] lg:p-10 lg:px-15 pt-8 lg:mt-6 lg:rounded-xl">
+        <div className="flex content-start flex-wrap gap-3 lg:gap-4 lg:pt-0 justify-center h-[370px] sm:h-[260px] lg:h-[200px]">
+          {filteredTechs.map((tech) => (
+            <div
+              key={tech.name}
+              className={`flex items-center gap-2 px-2 py-2 rounded-sm lg:rounded-lg  ${
+                theme === "dark"
+                  ? "border-[0.5px] border-[rgba(255,255,255,0.29)]"
+                  : " bg-[rgba(255,266,266,0.29)] text-[var(--color-bg)]"
+              }`}
+            >
+              <Image
+                className="lg:w-[16px]"
+                src={tech.iconsrc}
+                alt={tech.name}
+                width={14}
+                height={14}
+              />
+              <p className="text-xs lg:text-sm font-medium">{tech.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

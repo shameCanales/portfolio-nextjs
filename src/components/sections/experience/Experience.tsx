@@ -36,7 +36,7 @@ export const experiences = [
 
 export default function Experience() {
   return (
-    <div className="mt-15 sm:mt-10">
+    <div className="mt-15 sm:mt-10 lg:mt-18">
       <MainHeading>Experience</MainHeading>
       <SectionSubheading>That exposed me to the IT industry</SectionSubheading>
 

@@ -23,8 +23,8 @@ export default function ExperienceItem({
 }: ExperienceItemProps) {
   return (
     <>
-      <div className="mt-7 sm:mt-8 md:mt-9 lg:mt-4 lg:grid lg:grid-cols-2">
-        <div className="lg:px-6 lg:mt-3">
+      <div className="mt-7 sm:mt-8 md:mt-9 lg:mt-4 lg:grid lg:grid-cols-2 ">
+        <div className="lg:pr-10 lg:mt-3 lg:justify-self-end">
           <p
             className={`font-medium text-xs uppercase text-[var(--color-text-secondary)] ${outfit.className}`}
           >
@@ -38,20 +38,24 @@ export default function ExperienceItem({
           <p
             className={`text-sm mt-1 text-[var(--color-text-secondary)] ${outfit.className}`}
           >
-            {address} 
+            {address}
           </p>
         </div>
 
-        <div className="pl-4 sm:pl-10 md:pl-15 mt-6  relative">
+        <div className="pl-4 sm:pl-10 md:pl-15 lg:pl-10 mt-6  relative">
           <div className="absolute left-0 top-0 h-full w-[4px] bg-gradient-to-b from-[#5527FB] to-[#42097E]"></div>
           <div>
-            <p className={`text-xl font-black ${outfit.className}`}>{as}</p>
+            <p
+              className={`text-xl lg:text-2xl lg:mt-2 font-black ${outfit.className}`}
+            >
+              {as}
+            </p>
 
             <ul>
               {what.map((item) => (
                 <p
                   key={item}
-                  className={`mt-2 text-xs leading-4.5 sm:leading-5 md:leading-6 tracking-tight  2xl:max-w-[600px] text-[var(--color-text-secondary)] ${outfit.className}`}
+                  className={`mt-2 text-xs lg:text-sm leading-4.5 sm:leading-5 md:leading-6 tracking-tight  2xl:max-w-[600px] text-[var(--color-text-secondary)] ${outfit.className}`}
                 >
                   {item}
                 </p>

@@ -1,4 +1,4 @@
-import MainHeading from "../../ui/MainHeading";
+
 import EducationCard from "@/components/EducationCard";
 import AboutTitles from "@/components/ui/AboutTitle";
 

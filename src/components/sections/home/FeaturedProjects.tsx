@@ -3,7 +3,7 @@ import FeatureProjectsCarousel from "../../FeatureProjectsCarousel";
 
 export default function FeaturedProjects() {
   return (
-    <div className="mt-15 sm:mt-17 md:mt-32 mx-[-20px]">
+    <div className="mt-15 sm:mt-17 md:mt-32 mx-[-20px] sm:mx-[-32px] md:mx-[-48px]">
       <Subheading>Featured Projects</Subheading>
       <FeatureProjectsCarousel />
     </div>

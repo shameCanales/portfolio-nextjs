@@ -20,7 +20,7 @@ export default function CertificationItem({ item }: CertificationItemProps) {
   const theme = useSelector((state: RootState) => state.theme.theme);
 
   return (
-    <div className={` p-3 sm:p-6 md:p-3 sm:w-[427px] md:w-auto rounded-xl sm:rounded-2xl md:rounded-xl mt-5 md:mt-0 sm:mx-auto md:mx-0 bg-[var(--color-card)] ${theme === 'dark'? 'border-[.5px] border-[var(--color-border)]' : ''}`}>
+    <div className={` p-3 sm:p-6 md:p-3 lg:p-6 sm:w-[427px] md:w-auto rounded-xl sm:rounded-2xl md:rounded-xl lg:rounded-2xl mt-5 md:mt-0 sm:mx-auto md:mx-0 bg-[var(--color-card)] ${theme === 'dark'? 'border-[.5px] border-[var(--color-border)]' : ''}`}>
       <Image
         className="aspect-video w-full rounded-sm sm:rounded-xl"
         src={item.thumbnail}
@@ -29,9 +29,9 @@ export default function CertificationItem({ item }: CertificationItemProps) {
         height="69"
       />
 
-      <p className="mt-4 font-bold text-[var(--color-text)]">{item.title}</p>
+      <p className="mt-4 font-bold lg:text-lg text-[var(--color-text)]">{item.title}</p>
 
-      <p className="mt-3 text-xs leading-4.5 text-[var(--color-text-secondary)]">
+      <p className="mt-3 text-xs lg:text-sm leading-4.5 lg:leading-normal text-[var(--color-text-secondary)]">
         {item.description}
       </p>
 
@@ -39,25 +39,26 @@ export default function CertificationItem({ item }: CertificationItemProps) {
         {item.did.map((didItem, index) => (
           <li key={index} className="flex items-start gap-2 mt-1.5">
             <Image
+              className="lg:w-[20px]"
               src="/checklist.png"
               alt="check icon"
               width="17"
               height="17"
             />
-            <p className="text-xs font-normal text-[var(--color-text-secondary)]">
+            <p className="text-xs lg:text-sm font-normal text-[var(--color-text-secondary)]">
               {didItem}
             </p>
           </li>
         ))}
       </ul>
 
-      <p className="mt-4 text-xs font-medium text-[var(--color-text)]">
+      <p className="mt-4 text-xs lg:text-sm font-medium text-[var(--color-text)]">
         What I learned
       </p>
       <ul className="flex content-start flex-wrap gap-2 justify-start mt-3">
         {item.learned.map((tech) => (
           <li key={tech}>
-            <p className="text-xs py-1 px-3 rounded-2xl text-[#FFFCEE] bg-[var(--color-accent)]">
+            <p className="text-xs py-1 lg:py-2 px-3 lg:px-4 rounded-2xl text-[#FFFCEE] bg-[var(--color-accent)]">
               {tech}
             </p>
           </li>
@@ -65,7 +66,7 @@ export default function CertificationItem({ item }: CertificationItemProps) {
       </ul>
 
       <Link href={item.certLink}>
-        <div className="mt-7 bg-[#FFFFFF] flex items-center px-4 py-2 justify-between sm:w-[174px] md:w-[180px] rounded-sm">
+        <div className="mt-7 bg-[#FFFFFF] flex items-center px-4 py-2 justify-between sm:w-[174px] md:w-[180px] rounded-sm lg:rounded-md">
           <p className="text-[#1C1C1C] text-sm">View Certificate</p>
           <Image
             src="/light-mode/right-arrow.png"

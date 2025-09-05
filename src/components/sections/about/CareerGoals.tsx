@@ -1,4 +1,4 @@
-import MainHeading from "../../ui/MainHeading";
+
 import GoalCard from "../../GoalCard";
 import AboutTitles from "@/components/ui/AboutTitle";
 

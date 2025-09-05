@@ -1,16 +1,23 @@
 "use client";
 
+import { Poppins } from "next/font/google";
 import Image from "next/image";
 import React from "react";
 import { useSelector } from "react-redux";
 import type { RootState } from "@/lib/store/store";
+
+const poppins = Poppins({
+  weight: ["500"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function DownLoadResumeButton() {
   const theme = useSelector((state: RootState) => state.theme.theme);
 
   return (
     <div
-      className={`bg-[var(--color-text)]  p-2 rounded-md flex items-center justify-center `}
+      className={`p-2 lg:px-5 rounded-md flex items-center justify-center bg-[var(--color-text)]`}
     >
       <Image
         className="w-[14px] h-[14px] mr-1"
@@ -20,7 +27,7 @@ export default function DownLoadResumeButton() {
         height="14"
       />
       <a
-        className="text-[var(--color-bg)] text-xs"
+        className={`text-xs text-[var(--color-bg)] font-medium ${poppins.className}`}
         href={"/resume.pdf"}
         download
       >

@@ -9,7 +9,7 @@ interface LinkProps {
 export default function NavbarLink({ isActive, href, label }: LinkProps) {
   return (
     <li
-      className={`px-3 rounded-md ${
+      className={`px-3 rounded-md text-sm lg:text-base ${
         isActive
           ? "font-bold text-[var(--color-text)] bg-[var(--color-bg)]"
           : "text-[var(--color-text-secondary)]"

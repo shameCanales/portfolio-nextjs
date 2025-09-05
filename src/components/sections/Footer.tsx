@@ -35,21 +35,23 @@ export default function Footer() {
 
   return (
     <div
-      className={`mt-10  text-center pt-1 sm:pt-5 pb-8 px-5 sm:px-8 md:px-12 bg-[var(--color-card)] ${
+      className={`mt-10 text-center pt-1 sm:pt-5 pb-8 px-5 sm:px-8 md:px-12 lg:px-18 bg-[var(--color-card)] ${
         theme === "dark" ? "border-t-[.5px] border-[var(--color-border)]" : ""
       }`}
     >
-      <div className="sm:grid sm:grid-cols-2 sm:text-left sm:gap-2">
+      <div className="sm:grid lg:flex lg:justify-between sm:grid-cols-2 lg:grid-cols-3 sm:text-left sm:gap-2">
         <div>
           <FooterTitle>Mark Aron Shame Canales</FooterTitle>
-          <FooterParagraph>
+          <div className="">
+            <FooterParagraph>
             Frontend Developer and UI/UX enthusiast based in Pasig, Manila.
             Specializing in designing and building modern web applications and
             exploring full stack development.
           </FooterParagraph>
+          </div>
         </div>
 
-        <div className="sm:text-right">
+        <div className="sm:text-right lg:text-left">
           <FooterTitle>Quick Links</FooterTitle>
 
           <ul>
@@ -71,7 +73,7 @@ export default function Footer() {
         <div>
           <FooterTitle>Connect with Me</FooterTitle>
 
-          <ul className="flex justify-center sm:justify-start mt-4 gap-3">
+          <ul className="flex justify-center sm:justify-start mt-4 gap-3 lg:gap-4">
             {socialLinks.map((soc, index) => (
               <FooterSocialLinks
                 key={index}
