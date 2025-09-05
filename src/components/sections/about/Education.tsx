@@ -34,10 +34,15 @@ export const education = [
 
 export default function Education() {
   return (
-    <div className="mt-15">
-      <MainHeading>Education</MainHeading>
+    <div className="mt-15 sm:mt-20">
+      <div className="sm:hidden">
+        <MainHeading>Education</MainHeading>
+      </div>
+      <div className="hidden sm:block">
+        <MainHeading>Educational Background</MainHeading>
+      </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-3 lg:gap-4 2xl:gap-6 mt-4 sm:mt-6 2xl:mt-12 2xl:mx-auto 2xl:max-w-[1180px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-3 lg:gap-4 2xl:gap-6 mt-4 sm:mt-8 2xl:mt-12 2xl:mx-auto 2xl:max-w-[1180px]">
         {education.map((educ) => (
           <EducationCard
             key={educ.schoolYear}

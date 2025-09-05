@@ -22,10 +22,10 @@ export const careerGoals = [
 
 export default function CareerGoals() {
   return (
-    <div className="mt-15">
+    <div className="mt-15 sm:mt-18">
       <MainHeading>Career Goals</MainHeading>
 
-      <div className="mt-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-4 mt-4 sm:mt-6 md:mt-8 2xl:mt-12">
         {careerGoals.map((goal) => (
           <GoalCard
             key={goal.title}

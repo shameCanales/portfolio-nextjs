@@ -26,10 +26,15 @@ const devJourney = [
 
 export default function DevJourney() {
   return (
-    <div className="mt-15">
-      <MainHeading>Dev Journey</MainHeading>
+    <div className="mt-15 sm:mt-18 mb-20">
+      <div className="sm:hidden">
+        <MainHeading>Dev Journey</MainHeading>
+      </div>
+      <div className="hidden sm:block">
+        <MainHeading>Developer Journey</MainHeading>
+      </div>
 
-      <div className="mt-7 2xl:mt-15 2xl:max-w-[1120px] 2xl:mx-auto">
+      <div className="mt-7 sm:mt-10 2xl:mt-15 2xl:max-w-[1120px] 2xl:mx-auto">
         {devJourney.map((journ) => (
           <DevJourItem
             key={journ.title}

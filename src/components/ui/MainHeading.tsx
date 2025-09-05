@@ -1,6 +1,6 @@
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const inter = Inter({
+const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
   display: "swap",
@@ -9,7 +9,7 @@ const inter = Inter({
 export default function MainHeading({ children }: { children: string }) {
   return (
     <h1
-      className={`text-3xl sm:text-4xl text-center w-[245px] mx-auto font-extrabold  ${inter.className}`}
+      className={`text-3xl sm:text-4xl text-center  mx-auto font-black  ${poppins.className}`}
     >
       {children}
     </h1>
