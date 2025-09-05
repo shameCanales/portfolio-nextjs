@@ -7,6 +7,8 @@ import Image from "next/image";
 import { Poppins } from "next/font/google";
 import { useSelector } from "react-redux";
 import type { RootState } from "@/lib/store/store";
+import { usePathname } from "next/navigation";
+import NavbarLink from "../ui/NavbarLink";
 
 const poppins = Poppins({
   weight: ["400", "600", "700"],
@@ -14,37 +16,41 @@ const poppins = Poppins({
   display: "swap",
 });
 
+const links = [
+  { route: "/", label: "Home" },
+  { route: "/experience", label: "Experience" },
+  { route: "/projects", label: "Projects" },
+  { route: "/about", label: "About" },
+];
+
 export default function NavBar() {
   const theme = useSelector((state: RootState) => state.theme.theme);
-  console.log(theme);
+  const pathname = usePathname();
 
   return (
     <div
-      className={`sticky top-4.5 z-11 shadow-md flex justify-between items-center px-3 py-1 mx-4 rounded-xs backdrop-blur-xs bg-[var(--color-card)] ${
+      className={`sticky top-4.5 z-11 shadow-md flex justify-between items-center px-3 sm: py-1 sm:py-2 mx-4 rounded-sm sm:rounded-lg backdrop-blur-xs bg-[var(--color-card)] ${
         theme === "dark" ? "border-[.5px] border-[rgba(255,255,255,.2)]" : ""
       }`}
     >
-      <p className={`${poppins.className} font-semibold text-xl`}>SC</p>
-      <ul className="hidden md:block">
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/experience">Experience</Link>
-        </li>
-
-        <li>
-          <Link href="/projects">Projects</Link>
-        </li>
-        <li>
-          <Link href="/about">About</Link>
-        </li>
+      <p className={`${poppins.className} font-semibold text-xl sm:text-2xl `}>
+        SC
+      </p>
+      <ul className="hidden md:flex md:gap-2">
+        {links.map((link) => (
+          <NavbarLink
+            key={link.route}
+            isActive={pathname === link.route}
+            href={link.route}
+            label={link.label}
+          />
+        ))}
       </ul>
-      <div>
+      <div className="flex">
         <ThemeToggle />
         <ToggleMobileNav>
           <Image
-            className="md:hidden"
+            className="md:hidden sm:w-[20px]"
             src={`/${theme}-mode/menu.png`}
             alt="toggle mobile menu"
             width="16"

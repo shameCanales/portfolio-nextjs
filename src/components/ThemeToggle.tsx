@@ -45,9 +45,10 @@ export default function ThemeToggle() {
   }
 
   return (
-    <button onClick={() => toggleTheme()} className="mr-3">
+    <button onClick={() => toggleTheme()} className="mr-3 ">
       {theme === "dark" ? (
         <Image
+          className="sm:w-[20px]"
           src="/dark-mode/sun.png"
           alt="sun icon toggle light mode"
           width="16"
@@ -55,6 +56,7 @@ export default function ThemeToggle() {
         />
       ) : (
         <Image
+          className="sm:w-[20px]"
           src="/light-mode/moon.png"
           alt="moon icon toggle dark mode"
           width="16"
