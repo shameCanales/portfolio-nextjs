@@ -4,7 +4,7 @@ import FooterSocialLinks from "../ui/FooterSocialLinks";
 import FooterTitle from "../ui/FooterTItle";
 import FooterParagraph from "../ui/FooterParagraph";
 import FooterLink from "../ui/FooterLink";
-import { useSelector, UseSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import type { RootState } from "@/lib/store/store";
 
 const socialLinks = [

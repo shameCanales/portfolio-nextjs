@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import ThemeToggle from "../ThemeToggle";
 import ToggleMobileNav from "../ToggleMobileNav";
 import Image from "next/image";

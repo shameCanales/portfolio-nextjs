@@ -20,9 +20,9 @@ export default function CertificationItem({ item }: CertificationItemProps) {
   const theme = useSelector((state: RootState) => state.theme.theme);
 
   return (
-    <div className={`bg-[var(--color-card)] p-3 rounded-xl mt-5 ${theme === 'dark'? 'border-[.5px] border-[var(--color-border)]' : ''}`}>
+    <div className={` p-3 sm:p-6 sm:w-[427px] rounded-xl sm:rounded-2xl mt-5 sm:mx-auto bg-[var(--color-card)] ${theme === 'dark'? 'border-[.5px] border-[var(--color-border)]' : ''}`}>
       <Image
-        className="aspect-video w-full rounded-sm"
+        className="aspect-video w-full rounded-sm sm:rounded-xl"
         src={item.thumbnail}
         alt={item.title}
         width="200"
@@ -65,7 +65,7 @@ export default function CertificationItem({ item }: CertificationItemProps) {
       </ul>
 
       <Link href={item.certLink}>
-        <div className="mt-7 bg-[#FFFFFF] flex items-center px-4 py-2 justify-between rounded-sm">
+        <div className="mt-7 bg-[#FFFFFF] flex items-center px-4 py-2 justify-between sm:w-[174px] rounded-sm">
           <p className="text-[#1C1C1C] text-sm">View Certificate</p>
           <Image
             src="/light-mode/right-arrow.png"

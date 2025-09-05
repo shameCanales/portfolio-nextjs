@@ -36,11 +36,11 @@ export const experiences = [
 
 export default function Experience() {
   return (
-    <div className="mt-15">
+    <div className="mt-15 sm:mt-10">
       <MainHeading>Experience</MainHeading>
       <SectionSubheading>That exposed me to the IT industry</SectionSubheading>
 
-      <ul className="mt-18">
+      <ul className="mt-18 sm:mt-12">
         {experiences.map((exp) => (
           <li key={exp.date}>
             <ExperienceItem
