@@ -28,12 +28,12 @@ export default function FeaturedProjectItem({ project }: { project: Project }) {
 
   return (
     <div
-      className={`absolute cursor-pointer w-[260px] backdrop-blur-md bg-[var(--color-card)] rounded-lg p-3.5 text-left  ${
-        theme === "dark" ? "border-[0.5px] border-[var(--color-card)]" : ""
+      className={`absolute cursor-pointer w-[260px] sm:w-[320px] backdrop-blur-md bg-[var(--color-card)] rounded-lg p-3.5 text-left  ${
+        theme === "dark" ? "border-[0.5px] border-[var(--color-border)]" : ""
       }`}
     >
       <Image
-        className="rounded-lg"
+        className="rounded-lg sm:w-[283px] mx-auto"
         src={project.src}
         alt={project.description}
         width="228"
@@ -41,15 +41,16 @@ export default function FeaturedProjectItem({ project }: { project: Project }) {
       />
       <p className={`font-bold text-sm mt-4`}>{project.title}</p>
       <p
-        className={`text-xs text-[var(--color-text-secondary)] leading-4.5 mt-2 font-normal ${inter.className}`}
+        className={`text-xs text-[var(--color-text-secondary)] leading-4.5 mt-2 sm:mt-1 font-normal ${inter.className}`}
       >
         {project.description}
       </p>
 
       <ul className="mt-3">
         {project.features.map((feat) => (
-          <div key={feat} className="flex items-start mt-0.5">
+          <div key={feat} className="flex items-start mt-0.5 sm:mt-1.5">
             <Image
+              className="sm:w-[18px]"
               src="/checklist.png"
               alt="checklist icon"
               width="15"
@@ -64,7 +65,7 @@ export default function FeaturedProjectItem({ project }: { project: Project }) {
         ))}
       </ul>
 
-      <ul className="mt-4 flex flex-wrap gap-2">
+      <ul className="mt-4 sm:mt-5 flex flex-wrap gap-2 sm:gap-3">
         {project.techUsed.map((tech) => (
           <p
             key={tech}
@@ -78,7 +79,8 @@ export default function FeaturedProjectItem({ project }: { project: Project }) {
       <div className="flex gap-2 mt-7">
         <Link href={project.liveLink}>
           <Image
-            src="/dark-mode/external.png"
+            className="sm:w-[18px]"
+            src={`/${theme === "dark" ? "dark" : "light"}-mode/external.png`}
             alt="go to live link"
             width="12"
             height="12"
@@ -86,7 +88,8 @@ export default function FeaturedProjectItem({ project }: { project: Project }) {
         </Link>
         <Link href={project.liveLink}>
           <Image
-            src="/dark-mode/github-logo.png"
+            className="sm:w-[18px]"
+            src={`/${theme === "dark" ? "dark" : "light"}-mode/github-logo.png`}
             alt="go to live link"
             width="12"
             height="12"

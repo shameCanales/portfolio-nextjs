@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/sections/NavBar";
-import MobileNav from "@/components/MobileNav";
+import MobileNav from "@/components/sections/MobileNav";
 import ReduxProvider from "@/lib/providers/ReduxProvider";
 import TanstackProvider from "@/lib/providers/TanstackProvider";
 import Footer from "@/components/sections/Footer";
@@ -30,7 +30,9 @@ export default function RootLayout({
           <TanstackProvider>
             <MobileNav />
             <NavBar />
-            <div className={`${inter.className}  antialiased mx-5 my-4.5`}>
+            <div
+              className={`${inter.className}  antialiased mx-5 sm:mx-8 my-4.5`}
+            >
               {children}
             </div>
             <Footer />

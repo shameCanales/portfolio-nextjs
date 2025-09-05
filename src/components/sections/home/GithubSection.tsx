@@ -4,7 +4,7 @@ import GithubStats from "@/components/GitHubStats";
 
 export default function GithubSection() {
   return (
-    <div className="mt-23">
+    <div className="mt-23 sm:mt-26">
       <Subheading>GitHub Contribution Activity</Subheading>
       <MainParagraph>
         Learned and started using git and GitHub as my version control system

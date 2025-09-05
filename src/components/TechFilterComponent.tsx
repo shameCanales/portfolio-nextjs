@@ -80,7 +80,7 @@ export default function TechFilterComponent() {
   return (
     <div className="w-full mt-5">
       {/* Selection Bar (Scrollable Menu) */}
-      <div className="flex overflow-x-auto gap-5 mb-6 py-2 scrollbar-hide mx-[-20px] px-4 bg-[var(--color-card)]">
+      <div className="flex overflow-x-auto gap-5 sm:gap-8 sm:justify-center py-2 scrollbar-hide mx-[-20px] sm:mx-[-32px] px-4 bg-[var(--color-card)]">
         {categories.map((cat) => (
           <button
             key={cat.name}
@@ -98,7 +98,7 @@ export default function TechFilterComponent() {
       </div>
 
       {/* Tech List (Side-by-side flex items) */}
-      <div className="flex content-start flex-wrap gap-3 justify-center h-[370px]">
+      <div className="flex content-start flex-wrap gap-3 pt-8 justify-center h-[370px] sm:h-[260px]">
         {filteredTechs.map((tech) => (
           <div
             key={tech.name}

@@ -44,7 +44,7 @@ export default function MarqueeRow({
         transition={transition}
       >
         {/* Repeat content twice for seamless marquee loop */}
-        {Array.from({ length: 2 }).map((_, i) => (
+        {Array.from({ length: 3 }).map((_, i) => (
           <div key={i} className="flex gap-15">
             {items.map((item) => (
               <div
@@ -58,7 +58,7 @@ export default function MarqueeRow({
                   height={17}
                 />
                 <p
-                  className={`${inter.className} font-medium text-xs text-[var(--color-text-secondary)]`}
+                  className={`${inter.className} font-medium text-xs sm:text-sm text-[var(--color-text-secondary)]`}
                 >
                   {item.name}
                 </p>

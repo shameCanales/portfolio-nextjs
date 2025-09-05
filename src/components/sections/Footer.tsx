@@ -35,11 +35,11 @@ export default function Footer() {
 
   return (
     <div
-      className={`mt-10 bg-[var(--color-card)] text-center pt-1 pb-8 px-5 ${
+      className={`mt-10 bg-[var(--color-card)] text-center pt-1 sm:pt-5 pb-8 px-5 ${
         theme === "dark" ? "border-t-[.5px] border-[var(--color-border)]" : ""
       }`}
     >
-      <div>
+      <div className="sm:grid sm:grid-cols-2 sm:text-left sm:gap-2">
         <div>
           <FooterTitle>Mark Aron Shame Canales</FooterTitle>
           <FooterParagraph>
@@ -49,7 +49,7 @@ export default function Footer() {
           </FooterParagraph>
         </div>
 
-        <div>
+        <div className="sm:text-right">
           <FooterTitle>Quick Links</FooterTitle>
 
           <ul>
@@ -71,7 +71,7 @@ export default function Footer() {
         <div>
           <FooterTitle>Connect with Me</FooterTitle>
 
-          <ul className="flex justify-center mt-4 gap-3">
+          <ul className="flex justify-center sm:justify-start mt-4 gap-3">
             {socialLinks.map((soc, index) => (
               <FooterSocialLinks
                 key={index}
@@ -84,7 +84,7 @@ export default function Footer() {
       </div>
 
       <div
-        className={`border-t-[0.5px] mt-10 ${
+        className={`border-t-[0.5px] mt-10 sm:flex sm:justify-between ${
           theme === "dark" ? "border-[var(--color-border)]" : "border-[#4E4E4E]"
         }`}
       >

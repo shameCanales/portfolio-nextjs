@@ -65,7 +65,7 @@ const items3 = [
 
 export default function TechMarue() {
   return (
-    <div className="flex flex-col gap-4 bg-[var(--color-card)] mx-[-20px] py-4 mt-16">
+    <div className="flex flex-col gap-4 bg-[var(--color-card)] mx-[-20px] sm:mx-[-32px] py-4 sm:py-6 mt-16 sm:mt-12">
       <MarqueeRow direction="left" speed={20} items={items1} />
       <MarqueeRow direction="right" speed={20} items={items2} />
       <MarqueeRow direction="left" speed={20} items={items3} />

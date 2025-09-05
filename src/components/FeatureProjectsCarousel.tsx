@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, PanInfo } from "framer-motion";
 import FeaturedProjectItem from "./FeauredProjectItem";
 
@@ -101,6 +101,22 @@ export default function FeatureProjectsCarousel() {
     }
   };
 
+  const [cardOffset, setCardOffset] = useState(230);
+
+  useEffect(() => {
+    const updateOffset = () => {
+      if (window.innerWidth <= 639) {
+        setCardOffset(230); // mobile
+      } else if (window.innerWidth <= 767) {
+        setCardOffset(300); //sm
+      }
+    };
+
+    updateOffset(); // set on mount
+    window.addEventListener("resize", updateOffset);
+    return () => window.removeEventListener("resize", updateOffset);
+  }, []);
+
   return (
     <div
       ref={containerRef}
@@ -110,7 +126,7 @@ export default function FeatureProjectsCarousel() {
         const isCenter = index === current;
 
         // Horizontal offset
-        const offset = (index - current) * 230;
+        const offset = (index - current) * cardOffset;
 
         return (
           <motion.div

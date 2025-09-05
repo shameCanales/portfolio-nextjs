@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import ToggleMobileNav from "./ToggleMobileNav";
+import ToggleMobileNav from "../ToggleMobileNav";
 import { useSelector, useDispatch } from "react-redux";
 import type { RootState, AppDispatch } from "@/lib/store/store";
 import { uiActions } from "@/lib/store/ui-slice";
@@ -71,9 +71,10 @@ export default function MobileNav() {
           variants={containerVariants}
           className="md:hidden fixed top-0 w-full h-full bg-[rgba(17,17,17,0.56)] backdrop-blur-sm pt-8 text-center flex flex-col z-[99]"
         >
-          <div className="text-right mr-7">
+          <div className="text-right mr-7 sm:mr-11 sm:mt-3">
             <ToggleMobileNav>
               <Image
+                className="sm:w-[26px]"
                 src="/cancel.png"
                 alt="close navigation button"
                 width="22"
@@ -82,18 +83,20 @@ export default function MobileNav() {
             </ToggleMobileNav>
           </div>
 
-          <motion.ul className="mt-10">
+          <motion.ul className="mt-10 sm:mt-8">
             {links.map((link) => (
               <motion.li
                 key={link.route}
                 variants={linkVariants}
-                className={`mt-8 ${
+                className={`mt-8 sm:mt-10 ${
                   pathname === link.route
                     ? "font-bold text-[#FFFFFF]"
                     : "text-[#C3C3C3]"
                 }`}
               >
-                <Link href={link.route}>{link.label}</Link>
+                <Link href={link.route}>
+                  <p className="sm:text-lg">{link.label}</p>
+                </Link>
               </motion.li>
             ))}
           </motion.ul>

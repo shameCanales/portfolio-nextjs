@@ -11,5 +11,5 @@ export default function Subheading({
 }: {
   children: React.ReactNode;
 }) {
-  return <p className={`font-bold ${montserrat.className}`}>{children}</p>;
+  return <p className={`font-extrabold sm:text-xl ${montserrat.className}`}>{children}</p>;
 }
