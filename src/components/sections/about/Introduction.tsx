@@ -5,10 +5,11 @@ import SectionSubheading from "@/components/ui/SectionSubheading";
 export default function Introduction() {
   return (
     <div>
-      <div className="text mt-16 sm:mt-7 md:mt-8 lg:mt-12 2xl:mt-20">
+      <div className="text mt-16 sm:mt-7 md:mt-15 ">
         <MainHeading>Hi! I&apos;m Shame.</MainHeading>
         <SectionSubheading>An Aspiring Frontend Engineer</SectionSubheading>
-        <IntroParagraph>
+        <div className="md:mt-6">
+          <IntroParagraph>
           I&apos;m a fresh IT graduate and self-taught developer passionate
           about turning ideas into interactive, user-friendly web experiences.
           With certifications in React, JavaScript, HTML, CSS, and UI/UX design,
@@ -30,6 +31,7 @@ export default function Introduction() {
           consistency, I aim to contribute, grow, and create meaningful digital
           solutions one project at a time.
         </IntroParagraph>
+        </div>
       </div>
     </div>
   );

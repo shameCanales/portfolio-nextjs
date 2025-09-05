@@ -1,5 +1,6 @@
 import MainHeading from "../../ui/MainHeading";
 import EducationCard from "@/components/EducationCard";
+import AboutTitles from "@/components/ui/AboutTitle";
 
 export const education = [
   {
@@ -34,15 +35,15 @@ export const education = [
 
 export default function Education() {
   return (
-    <div className="mt-15 sm:mt-20">
+    <div className="mt-15 sm:mt-20 md:mt-24">
       <div className="sm:hidden">
-        <MainHeading>Education</MainHeading>
+        <AboutTitles>Education</AboutTitles>
       </div>
       <div className="hidden sm:block">
-        <MainHeading>Educational Background</MainHeading>
+        <AboutTitles>Educational Background</AboutTitles>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-3 lg:gap-4 2xl:gap-6 mt-4 sm:mt-8 2xl:mt-12 2xl:mx-auto 2xl:max-w-[1180px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-4 sm:gap-3 lg:gap-4 2xl:gap-6 mt-4 sm:mt-8 2xl:mt-12 2xl:mx-auto 2xl:max-w-[1180px]">
         {education.map((educ) => (
           <EducationCard
             key={educ.schoolYear}

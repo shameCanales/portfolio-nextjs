@@ -124,6 +124,8 @@ export default function FeatureProjectsCarousel() {
         setCardOffset(230); // mobile
       } else if (window.innerWidth < 768) {
         setCardOffset(300); //sm
+      } else if (window.innerWidth < 1024) {
+        setCardOffset(370); //md
       }
     };
 
@@ -160,7 +162,7 @@ export default function FeatureProjectsCarousel() {
                 style={{ zIndex: isCenter ? 10 : 5 }}
               >
                 <div
-                  className={`w-[240px] sm:w-[300px] aspect-video bg-gray-800 rounded-xl shadow-lg p-2 ${
+                  className={`w-[240px] sm:w-[300px] md:w-[400px] aspect-video bg-gray-800 rounded-xl shadow-lg p-2 ${
                     isCenter ? "border-2 z-[0]" : "z-[-5]"
                   }`}
                 >
@@ -177,7 +179,7 @@ export default function FeatureProjectsCarousel() {
           })}
         </div>
 
-        <div className="mt-4 sm:mt-10 sm:pl-13 relative">
+        <div className="mt-4 sm:mt-10 md:mt-5 sm:pl-13 relative">
           <div className="hidden sm:block absolute bg-[var(--color-accent)] top-3 left-0 w-[31px] h-[6px] rounded-2xl"></div>
           <p
             className={` font-bold text-base sm:text-xl text-[var(--color-text)] ${poppins.className}`}

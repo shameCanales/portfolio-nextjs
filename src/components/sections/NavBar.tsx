@@ -28,7 +28,7 @@ export default function NavBar() {
 
   return (
     <div
-      className={`sticky top-4.5 z-11 shadow-md flex justify-between items-center px-3 py-1 sm:py-2 mx-8 sm:mt-8 sm:mx-8 rounded-sm sm:rounded-lg backdrop-blur-xs bg-[var(--color-card)] ${
+      className={`sticky top-4.5 z-11 shadow-md flex justify-between items-center px-3 py-1 sm:py-2 mx-8 sm:mt-8 md:mx-12 rounded-sm sm:rounded-lg backdrop-blur-xs bg-[var(--color-card)] ${
         theme === "dark" ? "border-[.5px] border-[rgba(255,255,255,.2)]" : ""
       }`}
     >

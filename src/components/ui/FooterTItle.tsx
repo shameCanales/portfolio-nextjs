@@ -8,7 +8,7 @@ const poppins = Poppins({
 
 export default function FooterTitle({ children }: { children: string }) {
   return (
-    <p className={`font-bold text-[var(--color-text)] text-sm mt-11 sm:mt-4 ${poppins.className}`}>
+    <p className={`font-bold text-[var(--color-text)] text-sm mt-11 sm:mt-4 md:mt-2 ${poppins.className}`}>
       {children}
     </p>
   );

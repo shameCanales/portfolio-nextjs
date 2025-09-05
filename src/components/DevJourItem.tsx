@@ -20,11 +20,11 @@ export default function DevJourItem({
 }) {
   return (
     <div
-      className={`mt-4 border-[var(--color-text-secondary)] border-l-3 lg:border-l-0 pl-4 lg:pl-0 lg:grid lg:grid-cols-2 `}
+      className={`mt-4 md:mt-6 border-[var(--color-accent)] border-l-3 lg:border-l-0 pl-4 lg:pl-0 lg:grid lg:grid-cols-2 `}
     >
       <div>
         <p
-          className={`text-sm sm:text-base xl:text-xl lg:text-right lg:pr-4 text-[var(--colot-text)] font-bold ${poppins.className}`}
+          className={`text-sm sm:text-base md:text-xl xl:text-xl lg:text-right lg:pr-4 text-[var(--colot-text)] font-bold ${poppins.className}`}
         >
           {title}
         </p>

@@ -47,23 +47,23 @@ const socialsIcon: SocialIconLinks[] = [
 export default function HeroSection() {
   return (
     <div>
-      <div className="mt-15">
+      <div className="mt-15 md:mt-14">
         <Image
-          className="mx-auto rounded-full sm:w-[247px]"
+          className="mx-auto rounded-full sm:w-[207px]"
           src="/profile.png"
           alt="Profile picture"
           width="120"
           height="120"
         />
       </div>
-      <div className="mt-10 text-center">
+      <div className="mt-10 md:mt-14 text-center">
         <h1
           className={`text-3xl sm:text-4xl w-[245px] sm:w-[550px] mx-auto font-extrabold ${inter.className}`}
         >
           Mark Aron Shame Canales
         </h1>
         <p
-          className={`text-[var(--color-text-secondary)] text-sm sm:text-base mt-3 sm:mt-2 font-semibold ${inter.className}`}
+          className={`text-sm sm:text-base mt-3 sm:mt-2 font-semibold text-[var(--color-text-secondary)] ${inter.className}`}
         >
           Aspiring Frontend Engineer
         </p>
@@ -75,13 +75,13 @@ export default function HeroSection() {
           Specializing in Frontend Development with NextJS.
         </p>
 
-        <div className="mt-5 sm:mt-10 grid grid-cols-2 gap-3 sm:w-[276px] mx-auto">
+        <div className="mt-5 sm:mt-10 md:mt-6 grid grid-cols-2 gap-3 sm:w-[276px] mx-auto">
           <DownLoadResumeButton />
           <SeeMyWorkButton />
         </div>
 
         <div>
-          <ul className="flex gap-2 justify-center mt-5">
+          <ul className="flex gap-2 md:gap-3 justify-center mt-5">
             {socialsIcon.map((soc) => (
               <HeroSocialsItem key={soc.filename} item={soc}/>
             ))}

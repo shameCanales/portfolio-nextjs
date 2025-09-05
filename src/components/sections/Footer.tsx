@@ -35,7 +35,7 @@ export default function Footer() {
 
   return (
     <div
-      className={`mt-10 bg-[var(--color-card)] text-center pt-1 sm:pt-5 pb-8 px-5 ${
+      className={`mt-10  text-center pt-1 sm:pt-5 pb-8 px-5 sm:px-8 md:px-12 bg-[var(--color-card)] ${
         theme === "dark" ? "border-t-[.5px] border-[var(--color-border)]" : ""
       }`}
     >
@@ -84,7 +84,7 @@ export default function Footer() {
       </div>
 
       <div
-        className={`border-t-[0.5px] mt-10 sm:flex sm:justify-between ${
+        className={`border-t-[0.5px] mt-10 md:mt-12 sm:flex sm:justify-between ${
           theme === "dark" ? "border-[var(--color-border)]" : "border-[#4E4E4E]"
         }`}
       >

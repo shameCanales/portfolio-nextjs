@@ -29,17 +29,17 @@ export default function EducationCard({
 
   return (
     <div
-      className={`p-4 sm:px-10 sm:py-5 md:py-7 lg:py-8 rounded-lg sm:rounded-xl md:rounded-3xl bg-[var(--color-card)] ${
+      className={`p-4 sm:px-10 sm:py-5 md:py-7 lg:py-8 rounded-lg sm:rounded-xl bg-[var(--color-card)] ${
         outfit.className
       } ${theme === "dark" ? "border-[var(--color-border)] border-[1px]" : ""}`}
     >
       <h1 className=" text-sm sm:text-base md:text-xl lg:text-2xl font-bold text-[var(--color-text)]">
         {title}
       </h1>
-      <p className={`text-xs mt-0.5 text-[var(--color-text)] font-normal`}>
+      <p className={`text-xs md:text-sm mt-0 text-[var(--color-text)] font-normal`}>
         {course}
       </p>
-      <p className="text-xs sm:text-sm lg:text-base leading-relaxed mt-2 md:mt-3 sm:mt-1 text-[var(--color-text-secondary)]">
+      <p className="text-xs sm:text-sm lg:text-base leading-tight mt-2 md:mt-3 sm:mt-1 text-[var(--color-text-secondary)]">
         {name}
         <br />
         {year}

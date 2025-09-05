@@ -80,12 +80,12 @@ export default function TechFilterComponent() {
   return (
     <div className="w-full mt-5">
       {/* Selection Bar (Scrollable Menu) */}
-      <div className="flex overflow-x-auto gap-5 sm:gap-8 sm:justify-center py-2 scrollbar-hide mx-[-20px] sm:mx-[-32px] px-4 bg-[var(--color-card)]">
+      <div className="flex overflow-x-auto gap-5 sm:gap-8 justify-center py-2 scrollbar-hide mx-[-20px] md:mx-[-48px] sm:mx-[-32px] px-4 bg-[var(--color-card)]">
         {categories.map((cat) => (
           <button
             key={cat.name}
             onClick={() => setSelectedCategory(cat.name)}
-            className={`whitespace-nowrap  rounded-md text-xs  transition-colors
+            className={`whitespace-nowrap  rounded-md text-xs md:text-sm transition-colors
               ${
                 selectedCategory === cat.name
                   ? "bg-[var(--color-bg)] text-[var(--color-text)] px-6 py-2 font-medium"

@@ -119,7 +119,7 @@ export default function Certification() {
         technologies and stay industry-ready.
       </MainParagraph>
 
-      <ul className="mt-10">
+      <ul className="mt-10 md:grid md:gap-5 md:grid-cols-2">
         {certificationsData.map((cert, index) => (
           <li key={index}>
             <CertificationItem item={cert} />

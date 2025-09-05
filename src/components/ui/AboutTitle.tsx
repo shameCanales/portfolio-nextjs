@@ -6,10 +6,10 @@ const poppins = Poppins({
   display: "swap",
 });
 
-export default function MainHeading({ children }: { children: string }) {
+export default function AboutTitles({ children }: { children: string }) {
   return (
     <h1
-      className={`text-3xl sm:text-4xl md:text-5xl text-center mx-auto font-black  ${poppins.className}`}
+      className={`text-2xl sm:text-3xl md:text-4xl text-center mx-auto font-black  ${poppins.className}`}
     >
       {children}
     </h1>

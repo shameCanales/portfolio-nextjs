@@ -40,7 +40,7 @@ export default function Experience() {
       <MainHeading>Experience</MainHeading>
       <SectionSubheading>That exposed me to the IT industry</SectionSubheading>
 
-      <ul className="mt-18 sm:mt-12">
+      <ul className="mt-18 sm:mt-12 md:mt-14">
         {experiences.map((exp) => (
           <li key={exp.date}>
             <ExperienceItem
