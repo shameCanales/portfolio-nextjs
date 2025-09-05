@@ -5,7 +5,7 @@ import SectionSubheading from "@/components/ui/SectionSubheading";
 
 export default function ProjectsPage() {
   return (
-    <div className="mt-15">
+    <div className="mt-15 sm:mt-10">
       <MainHeading>Projects</MainHeading>
       <SectionSubheading>
         That helped to become what I am today.

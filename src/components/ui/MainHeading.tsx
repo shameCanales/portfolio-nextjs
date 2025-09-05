@@ -9,7 +9,7 @@ const inter = Inter({
 export default function MainHeading({ children }: { children: string }) {
   return (
     <h1
-      className={`text-3xl text-center w-[245px] mx-auto font-extrabold  ${inter.className}`}
+      className={`text-3xl sm:text-4xl text-center w-[245px] mx-auto font-extrabold  ${inter.className}`}
     >
       {children}
     </h1>

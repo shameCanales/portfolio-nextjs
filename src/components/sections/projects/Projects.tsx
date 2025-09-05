@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, PanInfo } from "framer-motion";
 import { useSelector } from "react-redux";
@@ -116,15 +116,31 @@ export default function FeatureProjectsCarousel() {
     }
   };
 
+  const [cardOffset, setCardOffset] = useState(230);
+
+  useEffect(() => {
+    const updateOffset = () => {
+      if (window.innerWidth < 640) {
+        setCardOffset(230); // mobile
+      } else if (window.innerWidth < 768) {
+        setCardOffset(300); //sm
+      }
+    };
+
+    updateOffset(); // set on mount
+    window.addEventListener("resize", updateOffset);
+    return () => window.removeEventListener("resize", updateOffset);
+  }, []);
+
   const activeProj = featuredProjects[current];
 
   return (
     <div className="lg:hidden">
-      <div className=" flex-col items-center w-full mt-8">
+      <div className=" flex-col items-center w-full mt-8 sm:mt-12">
         <div className="relative flex w-full overflow-hidden h-[180px] md:h-[280px]">
           {featuredProjects.map((project, index) => {
             const isCenter = index === current;
-            const offset = (index - current) * 230; // card width + gap
+            const offset = (index - current) * cardOffset; // card width + gap
 
             return (
               <motion.div
@@ -144,7 +160,7 @@ export default function FeatureProjectsCarousel() {
                 style={{ zIndex: isCenter ? 10 : 5 }}
               >
                 <div
-                  className={`w-[240px] aspect-video bg-gray-800 rounded-xl shadow-lg p-2 ${
+                  className={`w-[240px] sm:w-[300px] aspect-video bg-gray-800 rounded-xl shadow-lg p-2 ${
                     isCenter ? "border-2 z-[0]" : "z-[-5]"
                   }`}
                 >
@@ -153,7 +169,7 @@ export default function FeatureProjectsCarousel() {
                     alt={project.title}
                     width={240}
                     height={160}
-                    className="rounded-lg object-cover"
+                    className="rounded-lg object-cover w-full"
                   />
                 </div>
               </motion.div>
@@ -161,21 +177,22 @@ export default function FeatureProjectsCarousel() {
           })}
         </div>
 
-        <div className="mt-4">
+        <div className="mt-4 sm:mt-10 sm:pl-13 relative">
+          <div className="hidden sm:block absolute bg-[var(--color-accent)] top-3 left-0 w-[31px] h-[6px] rounded-2xl"></div>
           <p
-            className={` font-bold text-base text-[var(--color-text)] ${poppins.className}`}
+            className={` font-bold text-base sm:text-xl text-[var(--color-text)] ${poppins.className}`}
           >
             {activeProj.title}
           </p>
           <p
-            className={`text-xs mt-1.5 font-normal leading-4.5 text-[var(--color-text-secondary)] ${outfit.className}`}
+            className={`text-xs sm:text-sm mt-1.5 font-normal leading-5 text-[var(--color-text-secondary)] ${outfit.className}`}
           >
             {activeProj.description}
           </p>
 
           <ul className="mt-4">
             {activeProj.features.map((feat, index) => (
-              <li key={index} className="flex items-start gap-2 mt-1">
+              <li key={index} className="flex items-start gap-2 mt-1 sm:mt-2">
                 <Image
                   src="/checklist.png"
                   alt="checklist icon"
@@ -191,18 +208,20 @@ export default function FeatureProjectsCarousel() {
             ))}
           </ul>
 
-          <ul className="flex content-start flex-wrap gap-1.5 justify-start h-[130px] mt-5">
+          <ul className="flex content-start flex-wrap gap-1.5 sm:gap-2.5 justify-start h-[130px] mt-5">
             {activeProj.techstack.map((tech) => (
               <li
                 key={tech.name}
-                className={`flex items-center gap-2 bg-[var(--color-card)] px-2 py-1 rounded-sm ${
+                className={`flex items-center gap-2 bg-[var(--color-card)] px-2 sm:px-3 py-1 sm:py-2 rounded-sm sm:rounded-md ${
                   theme === "dark"
                     ? "border-[0.5px] border-[rgba(255,255,255,0.29)]"
                     : ""
                 }`}
               >
                 <Image src={tech.src} alt={tech.name} width={14} height={14} />
-                <p className={`text-[10px] font-semibold ${outfit.className}`}>
+                <p
+                  className={`text-[10px] sm:text-xs font-semibold ${outfit.className}`}
+                >
                   {tech.name}
                 </p>
               </li>
