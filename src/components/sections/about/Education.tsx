@@ -35,7 +35,7 @@ export const education = [
 
 export default function Education() {
   return (
-    <div className="mt-15 sm:mt-20 md:mt-24">
+    <div className="mt-15 sm:mt-20 md:mt-24 xl:mt-30">
       <div className="sm:hidden">
         <AboutTitles>Education</AboutTitles>
       </div>

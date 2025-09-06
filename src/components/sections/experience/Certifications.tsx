@@ -111,7 +111,7 @@ const certificationsData = [
 
 export default function Certification() {
   return (
-    <div className="mt-30 sm:mt-25 lg:mt-28">
+    <div className="mt-30 sm:mt-25 lg:mt-28 xl:mt-32">
       <MainHeading>Certifications</MainHeading>
       <MainParagraph>
         Pursued self-directed learning beyond academic requirements to deepen my
@@ -119,7 +119,7 @@ export default function Certification() {
         technologies and stay industry-ready.
       </MainParagraph>
 
-      <ul className="mt-10 md:grid md:gap-5 md:grid-cols-2">
+      <ul className="mt-10 xl:mt-20 md:grid md:gap-5 md:grid-cols-2">
         {certificationsData.map((cert, index) => (
           <li key={index}>
             <CertificationItem item={cert} />

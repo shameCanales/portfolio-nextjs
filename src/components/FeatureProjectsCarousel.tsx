@@ -83,6 +83,7 @@ const featuredProjects: Project[] = [
 
 export default function FeatureProjectsCarousel() {
   const [current, setCurrent] = useState<number>(0);
+  const [scaleThres, setScaleThres] = useState<number>(0.7);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleCardClick = (index: number) => {
@@ -114,9 +115,13 @@ export default function FeatureProjectsCarousel() {
       } else if (window.innerWidth < 1024) {
         setCardOffset(300);
         setCurrent(1);
-      } else if (window.innerWidth < 1280){
+      } else if (window.innerWidth < 1280) {
         setCardOffset(350);
-        setCurrent(1)
+        setCurrent(1);
+      } else if (window.innerWidth < 1536) {
+        setScaleThres(0.9);
+        setCardOffset(380);
+        setCurrent(1);
       }
     };
 
@@ -139,7 +144,7 @@ export default function FeatureProjectsCarousel() {
         return (
           <motion.div
             key={project.id}
-            animate={{ x: offset, scale: isCenter ? 1 : 0.7 }}
+            animate={{ x: offset, scale: isCenter ? 1 : scaleThres }}
             transition={{
               type: "spring",
               stiffness: 200,

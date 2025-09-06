@@ -39,13 +39,13 @@ export default function MarqueeRow({
   return (
     <div className="w-full overflow-hidden">
       <motion.div
-        className="flex gap-15 md:gap-18"
+        className="flex gap-15 md:gap-18 lg:gap-25 xl:gap-32"
         animate={animation}
         transition={transition}
       >
         {/* Repeat content twice for seamless marquee loop */}
         {Array.from({ length: 3 }).map((_, i) => (
-          <div key={i} className="flex gap-15 md:gap-18 lg:gap-25">
+          <div key={i} className="flex gap-15 md:gap-18 lg:gap-25 xl:gap-32">
             {items.map((item) => (
               <div
                 key={item.name}

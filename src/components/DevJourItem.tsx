@@ -24,14 +24,14 @@ export default function DevJourItem({
     >
       <div>
         <p
-          className={`text-sm sm:text-base md:text-xl xl:text-xl lg:text-right lg:pr-5 text-[var(--colot-text)] font-bold ${poppins.className}`}
+          className={`text-sm sm:text-base md:text-xl xl:text-xl lg:text-right lg:pr-5 xl:pr-8 text-[var(--colot-text)] font-bold ${poppins.className}`}
         >
           {title}
         </p>
       </div>
       <div>
         <p
-          className={` text-xs sm:text-sm lg:text-base xl:text-base leading-normal mt-1.5 lg:mt-0 lg:border-l-3 lg:pl-4 text-[var(--color-text-secondary)] ${outfit.className}`}
+          className={` text-xs sm:text-sm lg:text-base xl:text-base leading-normal mt-1.5 lg:mt-0 lg:border-l-3 lg:pl-4 xl:pl-8 text-[var(--color-text-secondary)] ${outfit.className}`}
         >
           {desc}
         </p>

@@ -3,8 +3,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, PanInfo } from "framer-motion";
-import { useSelector } from "react-redux";
-import { RootState } from "@/lib/store/store";
 import { Poppins, Outfit } from "next/font/google";
 import TechItemProject from "@/components/ui/TechItemProject";
 
@@ -102,7 +100,6 @@ const featuredProjects: Project[] = [
 ];
 
 export default function FeatureProjectsCarousel() {
-  const theme = useSelector((state: RootState) => state.theme.theme);
   const [current, setCurrent] = useState(0);
 
   const handleDragEnd = (

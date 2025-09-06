@@ -20,7 +20,7 @@ export default function CertificationItem({ item }: CertificationItemProps) {
   const theme = useSelector((state: RootState) => state.theme.theme);
 
   return (
-    <div className={` p-3 sm:p-6 md:p-3 lg:p-6 sm:w-[427px] md:w-auto rounded-xl sm:rounded-2xl md:rounded-xl lg:rounded-2xl mt-5 md:mt-0 sm:mx-auto md:mx-0 bg-[var(--color-card)] ${theme === 'dark'? 'border-[.5px] border-[var(--color-border)]' : ''}`}>
+    <div className={` p-3 sm:p-6 md:p-3 lg:p-6 xl:p-10 sm:w-[427px] md:w-auto rounded-xl sm:rounded-2xl md:rounded-xl lg:rounded-2xl mt-5 md:mt-0 sm:mx-auto md:mx-0 bg-[var(--color-card)] ${theme === 'dark'? 'border-[.5px] border-[var(--color-border)]' : ''}`}>
       <Image
         className="aspect-video w-full rounded-sm sm:rounded-xl"
         src={item.thumbnail}

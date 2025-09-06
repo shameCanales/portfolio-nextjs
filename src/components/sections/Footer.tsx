@@ -6,6 +6,13 @@ import FooterParagraph from "../ui/FooterParagraph";
 import FooterLink from "../ui/FooterLink";
 import { useSelector } from "react-redux";
 import type { RootState } from "@/lib/store/store";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const socialLinks = [
   {
@@ -35,7 +42,7 @@ export default function Footer() {
 
   return (
     <div
-      className={`mt-10 text-center pt-1 sm:pt-5 pb-8 px-5 sm:px-8 md:px-12 lg:px-18 bg-[var(--color-card)] ${
+      className={`mt-10 text-center sm:text-left pt-1 sm:pt-5 pb-8 px-5 sm:px-8 md:px-12 lg:px-18 xl:px-[120px] bg-[var(--color-card)] ${
         theme === "dark" ? "border-t-[.5px] border-[var(--color-border)]" : ""
       }`}
     >
@@ -44,10 +51,10 @@ export default function Footer() {
           <FooterTitle>Mark Aron Shame Canales</FooterTitle>
           <div className="">
             <FooterParagraph>
-            Frontend Developer and UI/UX enthusiast based in Pasig, Manila.
-            Specializing in designing and building modern web applications and
-            exploring full stack development.
-          </FooterParagraph>
+              Frontend Developer and UI/UX enthusiast based in Pasig, Manila.
+              Specializing in designing and building modern web applications and
+              exploring full stack development.
+            </FooterParagraph>
           </div>
         </div>
 
@@ -86,16 +93,20 @@ export default function Footer() {
       </div>
 
       <div
-        className={`border-t-[0.5px] mt-10 md:mt-12 sm:flex sm:justify-between ${
+        className={`border-t-[0.5px] mt-10 md:mt-12 lg:pt-2 sm:flex sm:justify-between ${
           theme === "dark" ? "border-[var(--color-border)]" : "border-[#4E4E4E]"
         }`}
       >
-        <FooterParagraph>
+        <p
+          className={`md:w-[320px] lg:w-[343px]  text-xs mt-3 leading-4.5 xl:leading-normal text-[var(--color-text-secondary)] ${poppins.className}`}
+        >
           ©2025 Mark Aron Shame B. Canales. All rights reserved.
-        </FooterParagraph>
-        <FooterParagraph>
-          Built with Nextjs, Tailwind, and Framer Motion.
-        </FooterParagraph>
+        </p>
+        <p
+          className={`md:w-[320px] lg:w-[343px]  text-xs mt-3 leading-4.5 sm:text-right xl:leading-normal text-[var(--color-text-secondary)] ${poppins.className}`}
+        >
+          Built with NextJS, TailwindCSS, and Framer motion.
+        </p>
       </div>
     </div>
   );

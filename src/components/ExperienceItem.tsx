@@ -24,14 +24,14 @@ export default function ExperienceItem({
   return (
     <>
       <div className="mt-7 sm:mt-8 md:mt-9 lg:mt-4 lg:grid lg:grid-cols-2 ">
-        <div className="lg:pr-10 lg:mt-3 lg:justify-self-end">
+        <div className="lg:pr-10 xl:pr-25 lg:mt-3 lg:justify-self-end">
           <p
             className={`font-medium text-xs uppercase text-[var(--color-text-secondary)] ${outfit.className}`}
           >
             {when}
           </p>
           <p
-            className={`font-black text-base sm:text-xl mt-1 text-[var(--color-text)] ${outfit.className}`}
+            className={`font-black text-base sm:text-xl lg:text-2xl mt-1 text-[var(--color-text)] ${outfit.className}`}
           >
             {where}
           </p>
@@ -42,7 +42,7 @@ export default function ExperienceItem({
           </p>
         </div>
 
-        <div className="pl-4 sm:pl-10 md:pl-15 lg:pl-10 mt-6  relative">
+        <div className="pl-4 sm:pl-10 md:pl-15 lg:pl-10 xl:pl-13 mt-6  relative">
           <div className="absolute left-0 top-0 h-full w-[4px] bg-gradient-to-b from-[#5527FB] to-[#42097E]"></div>
           <div>
             <p

@@ -2,8 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { useSelector } from "react-redux";
-import { RootState } from "@/lib/store/store";
 import { Poppins, Outfit } from "next/font/google";
 import TechItemProject from "@/components/ui/TechItemProject";
 
@@ -134,7 +132,6 @@ const featuredProjects: Project[] = [
 ];
 
 export default function FeatureProjectsCarousel() {
-  const theme = useSelector((state: RootState) => state.theme.theme);
   const [current, setCurrent] = useState(0);
 
   // Ref for cards
@@ -168,10 +165,10 @@ export default function FeatureProjectsCarousel() {
   const activeProj = featuredProjects[current];
 
   return (
-    <div className="hidden lg:block">
-      <div className="grid grid-cols-2 w-full mt-12 gap-12 px-6">
+    <div className="hidden lg:block xl:mt-25">
+      <div className="grid grid-cols-2 w-full mt-12 xlmt:mt20 gap-12  px-6">
         {/* Cards list */}
-        <div className="flex flex-col gap-15 w-full pb-40">
+        <div className="flex flex-col gap-15 xl:gap-25 w-full pb-40">
           {featuredProjects.map((project, index) => (
             <div
               key={project.id}
@@ -179,7 +176,7 @@ export default function FeatureProjectsCarousel() {
                 if (el) cardRefs.current[index] = el;
               }}
               data-index={index}
-              className={`w-full lg:w-[350px] aspect-square rounded-2xl overflow-hidden mx-auto transition-shadow duration-300
+              className={`w-full lg:w-[350px] xl:w-[484px] aspect-square rounded-2xl overflow-hidden mx-auto transition-shadow duration-300
                 ${
                   index === current
                     ? "shadow-[0_0_25px_rgba(59,130,246,0.7)] border-2 border-blue-500"
@@ -200,7 +197,7 @@ export default function FeatureProjectsCarousel() {
         {/* Info panel */}
         <div className="w-full sticky top-24 self-start">
           <h2
-            className={`text-xl font-bold text-[var(--color-text)] ${poppins.className}`}
+            className={`text-xl xl:text-2xl font-bold text-[var(--color-text)] ${poppins.className}`}
           >
             {activeProj.title}
           </h2>

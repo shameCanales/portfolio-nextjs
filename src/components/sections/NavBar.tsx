@@ -28,14 +28,14 @@ export default function NavBar() {
 
   return (
     <div
-      className={`sticky top-4.5 z-11 shadow-md flex justify-between items-center px-3 py-1 sm:py-2 sm:mt-8 mx-8 md:mx-12 lg:mx-[72px] rounded-sm sm:rounded-lg backdrop-blur-xs bg-[var(--color-card)] ${
+      className={`sticky top-4.5 z-11 shadow-md flex justify-between items-center px-3 py-1 sm:py-2 sm:mt-8 mx-8 md:mx-12 lg:mx-[72px] xl:mx-[120px] rounded-sm sm:rounded-lg xl:rounded-[10px] backdrop-blur-xs bg-[var(--color-card)] ${
         theme === "dark" ? "border-[.5px] border-[rgba(255,255,255,.2)]" : ""
       }`}
     >
       <p className={`${poppins.className} font-semibold text-xl sm:text-2xl `}>
         SC
       </p>
-      <ul className="hidden md:flex md:gap-2 lg:gap-6">
+      <ul className="hidden md:flex md:gap-2 lg:gap-8">
         {links.map((link) => (
           <NavbarLink
             key={link.route}
