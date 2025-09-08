@@ -8,7 +8,7 @@ export default function Introduction() {
       <div className="text mt-16 sm:mt-7 md:mt-15 ">
         <MainHeading>Hi! I&apos;m Shame.</MainHeading>
         <SectionSubheading>An Aspiring Frontend Engineer</SectionSubheading>
-        <div className="md:mt-6">
+        <div className="md:mt-6 2xl:mt-10">
           <IntroParagraph>
           I&apos;m a fresh IT graduate and self-taught developer passionate
           about turning ideas into interactive, user-friendly web experiences.

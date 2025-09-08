@@ -78,8 +78,8 @@ export default function TechFilterComponent() {
       : techStack.filter((t) => t.category === selectedCategory);
 
   return (
-    <div className="w-full mt-5 lg:mb-35">
-      <div className="flex overflow-x-auto gap-5 sm:gap-8 lg:gap-14 lg:rounded-xl justify-center py-2 scrollbar-hide mx-[-20px] md:mx-[-48px] sm:mx-[-32px] lg:mx-0 xl:mt-10 px-4 bg-[var(--color-card)]">
+    <div className="w-full mt-5 lg:mb-35 2xl:mb-25">
+      <div className="flex overflow-x-auto gap-7 sm:gap-10 lg:gap-16 2xl:gap-20  justify-center-safe lg:rounded-xl  py-2 scrollbar-hide mx-[-20px] md:mx-[-48px] sm:mx-[-32px]  lg:mx-0 xl:mt-10 px-6 bg-[var(--color-card)]">
         {categories.map((cat) => (
           <button
             key={cat.name}
@@ -96,7 +96,7 @@ export default function TechFilterComponent() {
         ))}
       </div>
 
-      <div className="bg-[#050B20] lg:p-10 lg:px-15 pt-8 lg:mt-6 xl:mt-10 lg:rounded-xl ">
+      <div className="2xl:bg-[#050B20] lg:p-10 lg:px-15 pt-8 lg:mt-6 xl:mt-10 lg:rounded-xl ">
         <div className="flex content-start flex-wrap gap-3 lg:gap-4 lg:pt-0 justify-center h-[370px] sm:h-[260px] lg:h-[200px] xl:h-[220px] xl:w-[820px] xl:mx-auto xl:my-auto">
           {filteredTechs.map((tech) => (
             <div

@@ -42,7 +42,7 @@ export default function Footer() {
 
   return (
     <div
-      className={`mt-10 text-center sm:text-left pt-1 sm:pt-5 pb-8 px-5 sm:px-8 md:px-12 lg:px-18 xl:px-[120px] bg-[var(--color-card)] ${
+      className={`mt-10 text-center sm:text-left pt-1 sm:pt-5 pb-8 px-5 sm:px-8 md:px-12 lg:px-18 xl:px-[120px] 2xl:px-[200px] bg-[var(--color-card)] ${
         theme === "dark" ? "border-t-[.5px] border-[var(--color-border)]" : ""
       }`}
     >
@@ -98,12 +98,12 @@ export default function Footer() {
         }`}
       >
         <p
-          className={`md:w-[320px] lg:w-[343px]  text-xs mt-3 leading-4.5 xl:leading-normal text-[var(--color-text-secondary)] ${poppins.className}`}
+          className={`md:w-[320px] lg:w-auto  text-xs 2xl:text-sm mt-3 leading-4.5 xl:leading-normal text-[var(--color-text-secondary)] ${poppins.className}`}
         >
           ©2025 Mark Aron Shame B. Canales. All rights reserved.
         </p>
         <p
-          className={`md:w-[320px] lg:w-[343px]  text-xs mt-3 leading-4.5 sm:text-right xl:leading-normal text-[var(--color-text-secondary)] ${poppins.className}`}
+          className={`md:w-[320px] lg:w-auto  text-xs 2xl:text-sm mt-3 leading-4.5 sm:text-right xl:leading-normal text-[var(--color-text-secondary)] ${poppins.className}`}
         >
           Built with NextJS, TailwindCSS, and Framer motion.
         </p>

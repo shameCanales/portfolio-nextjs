@@ -33,13 +33,13 @@ export default function EducationCard({
         outfit.className
       } ${theme === "dark" ? "border-[var(--color-border)] border-[1px]" : ""}`}
     >
-      <h1 className=" text-sm sm:text-base md:text-xl lg:text-xl font-bold text-[var(--color-text)]">
+      <h1 className=" text-sm sm:text-base md:text-xl lg:text-xl 2xl:text-2xl font-bold text-[var(--color-text)]">
         {title}
       </h1>
-      <p className={`text-xs md:text-sm mt-0 text-[var(--color-text)] font-normal`}>
+      <p className={`text-xs md:text-sm 2xl:text-base mt-0 text-[var(--color-text)] font-normal`}>
         {course}
       </p>
-      <p className="text-xs sm:text-sm leading-tight mt-2 md:mt-3 sm:mt-1 text-[var(--color-text-secondary)]">
+      <p className="text-xs sm:text-sm 2xl:text-base leading-tight mt-2 md:mt-3 sm:mt-1 text-[var(--color-text-secondary)]">
         {name}
         <br />
         {year}

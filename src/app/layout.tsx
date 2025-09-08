@@ -31,7 +31,7 @@ export default function RootLayout({
             <MobileNav />
             <NavBar />
             <div
-              className={`${inter.className}  antialiased px-5 sm:px-8 md:px-12 lg:px-[72px] xl:px-[120px] py-4.5`}
+              className={`${inter.className}  antialiased px-5 sm:px-8 md:px-12 lg:px-[72px] xl:px-[120px] 2xl:px-[200px] 2xl:max-w-[1920px] 2xl:mx-auto py-4.5`}
             >
               {children}
             </div>

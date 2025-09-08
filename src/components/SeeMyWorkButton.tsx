@@ -21,7 +21,7 @@ export default function SeeMyWorkButton() {
       className={`border-[var(--color-text)] border-[0.5px]  p-2 lg:px-4 rounded-md flex items-center justify-center`}
     >
       <Link
-        className={`text-[var(--color-text)] text-xs font-medium ${poppins.className}`}
+        className={`text-[var(--color-text)] text-xs 2xl:text-sm font-medium ${poppins.className}`}
         href="/projects"
       >
         See My Work

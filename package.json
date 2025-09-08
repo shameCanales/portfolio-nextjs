@@ -28,5 +28,14 @@
     "eslint-config-next": "15.5.2",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "tailwind": {
+    "theme": {
+      "extend": {
+        "screens": {
+          "3xl": "1920px"
+        }
+      }
+    }
   }
 }

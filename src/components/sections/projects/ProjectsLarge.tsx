@@ -195,7 +195,7 @@ export default function FeatureProjectsCarousel() {
         </div>
 
         {/* Info panel */}
-        <div className="w-full sticky top-24 self-start">
+        <div className="w-full 2xl:w-[515px] sticky top-24 2xl:top-44 self-start 2xl:pb-40">
           <h2
             className={`text-xl xl:text-2xl font-bold text-[var(--color-text)] ${poppins.className}`}
           >

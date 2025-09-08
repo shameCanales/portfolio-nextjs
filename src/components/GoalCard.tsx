@@ -30,7 +30,7 @@ export default function GoalCard({ title, description }: CardProps) {
       </h3>
 
       <p
-        className={`text-xs lg:text-sm mt-2 sm:mt-3 lg:mt-2 leading-normal text-[var(--color-text-secondary)] ${outfit.className}`}
+        className={`text-xs lg:text-sm mt-2 sm:mt-3 lg:mt-2 2xl:mt-3 leading-normal text-[var(--color-text-secondary)] ${outfit.className}`}
       >
         {description}
       </p>

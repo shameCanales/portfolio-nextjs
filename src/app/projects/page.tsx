@@ -1,4 +1,4 @@
-import Projects from "@/components/sections/projects/Projects";
+import Projects from "@/components/sections/projects/Projectsslider";
 import ProjectsLarge from "@/components/sections/projects/ProjectsLarge";
 import MainHeading from "@/components/ui/MainHeading";
 import SectionSubheading from "@/components/ui/SectionSubheading";

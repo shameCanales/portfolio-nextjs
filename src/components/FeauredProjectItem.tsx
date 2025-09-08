@@ -28,7 +28,7 @@ export default function FeaturedProjectItem({ project }: { project: Project }) {
 
   return (
     <div
-      className={`absolute cursor-pointer w-[260px] sm:w-[320px] lg:w-[366px] backdrop-blur-md bg-[var(--color-card)] rounded-lg lg:rounded-2xl p-3.5 text-left  ${
+      className={`absolute 2xl:static cursor-pointer w-[260px] sm:w-[320px] lg:w-[366px] backdrop-blur-md bg-[var(--color-card)] rounded-lg lg:rounded-2xl p-3.5 text-left  ${
         theme === "dark" ? "border-[0.5px] border-[var(--color-border)]" : ""
       }`}
     >
@@ -81,7 +81,7 @@ export default function FeaturedProjectItem({ project }: { project: Project }) {
       <div className="flex gap-2 mt-7">
         <Link href={project.liveLink}>
           <Image
-            className="sm:w-[18px]"
+            className="sm:w-[18px] 2xl:w-[21px]"
             src={`/${theme === "dark" ? "dark" : "light"}-mode/external.png`}
             alt="go to live link"
             width="12"
