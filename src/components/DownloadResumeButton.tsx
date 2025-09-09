@@ -17,7 +17,7 @@ export default function DownLoadResumeButton() {
 
   return (
     <div
-      className={`p-2 lg:px-5 rounded-md flex items-center justify-center bg-[var(--color-text)]`}
+      className={`p-2 lg:px-5 3xl:py-3 rounded-md 3xl:rounded-lg flex items-center justify-center bg-[var(--color-text)]`}
     >
       <Image
         className="w-[14px] h-[14px] mr-1 2xl:mr-2"

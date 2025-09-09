@@ -18,7 +18,7 @@ export default function SeeMyWorkButton() {
 
   return (
     <div
-      className={`border-[var(--color-text)] border-[0.5px]  p-2 lg:px-4 rounded-md flex items-center justify-center`}
+      className={`border-[var(--color-text)] border-[0.5px]  p-2 lg:px-4 3xl:py-3 rounded-md flex items-center justify-center`}
     >
       <Link
         className={`text-[var(--color-text)] text-xs 2xl:text-sm font-medium ${poppins.className}`}
@@ -27,7 +27,7 @@ export default function SeeMyWorkButton() {
         See My Work
       </Link>
       <Image
-        className={`w-[14px] h-[14px] ml-3 `}
+        className={`w-[14px] h-[14px] ml-3  3xl:ml-5`}
         src={`/${theme}-mode/right-arrow.png`}
         alt="download pdf button"
         width="15"
