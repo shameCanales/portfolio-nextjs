@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="m-0 p-0">
-      <body>
+      <body >
         <ReduxProvider>
           <TanstackProvider>
             <MobileNav />

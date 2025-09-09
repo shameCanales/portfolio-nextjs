@@ -46,7 +46,7 @@ const socialsIcon: SocialIconLinks[] = [
 
 export default function HeroSection() {
   return (
-    <div className="lg:flex lg:gap-2 lg:justify-between lg:mt-35 3xl:mt-55">
+    <div className="lg:flex lg:gap-2 lg:justify-between lg:mt-35 2xl:mt-45 3xl:mt-55">
       <Image
         className="mx-auto lg:mx-0 lg:self-start rounded-full w-[120px] sm:w-[207px] lg:w-[340px] 2xl:w-[410px] 3xl:w-[500px] mt-15 md:mt-14 lg:mt-0 lg:order-2"
         src="/profile.png"
