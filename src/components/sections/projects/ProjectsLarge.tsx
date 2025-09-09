@@ -168,7 +168,7 @@ export default function FeatureProjectsCarousel() {
     <div className="hidden lg:block xl:mt-25">
       <div className="grid grid-cols-2 w-full mt-12 xlmt:mt20 gap-12  px-6">
         {/* Cards list */}
-        <div className="flex flex-col gap-15 xl:gap-25 w-full pb-40">
+        <div className="flex flex-col gap-15 xl:gap-25 3xl:gap-35 w-full pb-40">
           {featuredProjects.map((project, index) => (
             <div
               key={project.id}
@@ -195,7 +195,7 @@ export default function FeatureProjectsCarousel() {
         </div>
 
         {/* Info panel */}
-        <div className="w-full 2xl:w-[515px] sticky top-24 2xl:top-44 self-start 2xl:pb-40">
+        <div className="w-full 2xl:w-[515px] sticky top-24 2xl:top-44 3xl:top-60 self-start 2xl:pb-40">
           <h2
             className={`text-xl xl:text-2xl font-bold text-[var(--color-text)] ${poppins.className}`}
           >

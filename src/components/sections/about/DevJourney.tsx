@@ -26,7 +26,7 @@ const devJourney = [
 
 export default function DevJourney() {
   return (
-    <div className="mt-15 sm:mt-18 md:mt-24 mb-20">
+    <div className="mt-15 sm:mt-18 md:mt-24 3xl:mt-45 mb-20">
       <div className="sm:hidden">
         <AboutTitles>Dev Journey</AboutTitles>
       </div>

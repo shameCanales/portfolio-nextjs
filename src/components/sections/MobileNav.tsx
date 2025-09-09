@@ -74,11 +74,11 @@ export default function MobileNav() {
           <div className="text-right mr-7 sm:mr-11 sm:mt-3">
             <ToggleMobileNav>
               <Image
-                className="sm:w-[26px]"
+                className="w-[22px] sm:w-[26px]"
                 src="/cancel.png"
                 alt="close navigation button"
-                width="22"
-                height="22"
+                width="250"
+                height="250"
               />
             </ToggleMobileNav>
           </div>

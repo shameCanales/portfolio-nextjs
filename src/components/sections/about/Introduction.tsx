@@ -5,7 +5,7 @@ import SectionSubheading from "@/components/ui/SectionSubheading";
 export default function Introduction() {
   return (
     <div>
-      <div className="text mt-16 sm:mt-7 md:mt-15 ">
+      <div className="text mt-16 sm:mt-7 md:mt-15 3xl:mt-25">
         <MainHeading>Hi! I&apos;m Shame.</MainHeading>
         <SectionSubheading>An Aspiring Frontend Engineer</SectionSubheading>
         <div className="md:mt-6 2xl:mt-10">

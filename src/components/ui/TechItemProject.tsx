@@ -25,7 +25,7 @@ export default function TechItemProject({ tech }: { tech: TechProps }) {
       }`}
     >
       <Image src={tech.src} alt={tech.name} width={14} height={14} />
-      <p className={`text-[10px] sm:text-xs font-semibold ${outfit.className}`}>
+      <p className={`text-[10px] sm:text-xs 3xl:text-sm font-semibold ${outfit.className}`}>
         {tech.name}
       </p>
     </li>

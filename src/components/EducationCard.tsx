@@ -29,7 +29,7 @@ export default function EducationCard({
 
   return (
     <div
-      className={`p-4 sm:px-10 sm:py-5 md:py-7 lg:py-8 rounded-lg sm:rounded-xl bg-[var(--color-card)] ${
+      className={`p-4 sm:px-10 sm:py-5 md:py-7 lg:py-8 rounded-lg sm:rounded-xl 3xl:rounded-2xl bg-[var(--color-card)] ${
         outfit.className
       } ${theme === "dark" ? "border-[var(--color-border)] border-[1px]" : ""}`}
     >

@@ -48,19 +48,19 @@ export default function ThemeToggle() {
     <button onClick={() => toggleTheme()} className="mr-3 ">
       {theme === "dark" ? (
         <Image
-          className="sm:w-[20px]"
+          className="w-[16px] sm:w-[20px]"
           src="/dark-mode/sun.png"
           alt="sun icon toggle light mode"
-          width="16"
-          height="16"
+          width="250"
+          height="250"
         />
       ) : (
         <Image
-          className="sm:w-[20px]"
+          className="w-[16px] sm:w-[20px]"
           src="/light-mode/moon.png"
           alt="moon icon toggle dark mode"
-          width="16"
-          height="16"
+          width="250"
+          height="250"
         />
       )}
     </button>

@@ -111,7 +111,7 @@ const certificationsData = [
 
 export default function Certification() {
   return (
-    <div className="mt-30 sm:mt-25 lg:mt-28 xl:mt-32">
+    <div className="mt-30 sm:mt-25 lg:mt-28 xl:mt-32 3xl:mt-50">
       <MainHeading>Certifications</MainHeading>
       <MainParagraph>
         Pursued self-directed learning beyond academic requirements to deepen my

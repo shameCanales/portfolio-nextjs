@@ -51,11 +51,11 @@ export default function NavBar() {
         <ThemeToggle />
         <ToggleMobileNav>
           <Image
-            className="md:hidden sm:w-[20px]"
+            className="md:hidden w-[16px] sm:w-[20px]"
             src={`/${theme}-mode/menu.png`}
             alt="toggle mobile menu"
-            width="16"
-            height="16"
+            width="250"
+            height="250"
           />
         </ToggleMobileNav>
       </div>

@@ -17,13 +17,13 @@ export default function HeroSocialsItem({ item }: { item: SocialsProps }) {
     <li key={item.filename}>
       <a href={item.href}>
         <Image
-          className="lg:w-[34px] 2xl:w-[40px]"
+          className="w-[26px] lg:w-[34px] 2xl:w-[40px]"
           src={`/${theme === "dark" ? "dark" : "light"}-mode/footer-socials/${
             item.filename
           }`}
           alt={item.alt}
-          width="26"
-          height="26"
+          width="250"
+          height="250"
         />
       </a>
     </li>
