@@ -28,7 +28,7 @@ export default function DownLoadResumeButton() {
       />
       <a
         className={`text-xs 2xl:text-sm text-[var(--color-bg)] font-medium ${poppins.className}`}
-        href={"/resume.pdf"}
+        href={"/Mark_Aron_Shame B._Canales -_Frontend_Developer.pdf"}
         download
       >
         Resume

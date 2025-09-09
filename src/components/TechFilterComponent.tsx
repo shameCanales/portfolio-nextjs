@@ -79,16 +79,16 @@ export default function TechFilterComponent() {
 
   return (
     <div className="w-full mt-5 lg:mb-35 2xl:mb-25 3xl:mb-40">
-      <div className="flex overflow-x-auto gap-7 sm:gap-10 lg:gap-16 2xl:gap-15 justify-center-safe lg:rounded-xl py-2 3xl:py-3 scrollbar-hide mx-[-20px] md:mx-[-48px] sm:mx-[-32px] lg:mx-0 2xl xl:mt-10 2xl:w-[910px] 3xl:w-[1100px] 2xl:mx-auto px-6 bg-[var(--color-card)]">
+      <div className="flex overflow-x-auto gap-7 sm:gap-10 2xl:gap-5 justify-center-safe xl:rounded-xl py-2 3xl:py-3 scrollbar-hide mx-[-20px] md:mx-[-48px] sm:mx-[-32px] lg:mx-[-72px] xl:mx-0 2xl xl:mt-10 2xl:w-[920px] 3xl:w-[1100px] 2xl:mx-auto px-6 bg-[var(--color-card)]">
         {categories.map((cat) => (
           <button
             key={cat.name}
             onClick={() => setSelectedCategory(cat.name)}
-            className={`whitespace-nowrap  rounded-md text-xs md:text-sm lg:text-base 3xl:text-lg transition-colors
+            className={`whitespace-nowrap  rounded-md text-xs md:text-sm lg:text-base 3xl:text-lg px-6 py-2  transition-colors
               ${
                 selectedCategory === cat.name
-                  ? "bg-[var(--color-bg)] text-[var(--color-text)] px-6 py-2 font-medium"
-                  : " text-[var(--color-text-secondary)] hover:bg-[var(--color-accent)] font-normal"
+                  ? "bg-[var(--color-bg)] text-[var(--color-text)] font-medium"
+                  : " text-[var(--color-text-secondary)] hover:bg-[var(--color-text)] hover:text-[var(--color-bg)] font-normal"
               } ${inter.className}`}
           >
             {cat.label}
