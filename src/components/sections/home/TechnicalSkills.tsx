@@ -4,7 +4,7 @@ import Subheading from "@/components/ui/Subheading";
 
 export default function TechnicalSkills() {
   return (
-    <div className="mt-18">
+    <div className="mt-18 2xl:mt-30 3xl:mt-45">
       <Subheading>Technical Skills</Subheading>
       <MainParagraph>
         {`These are the technologies that i'm currently using on software

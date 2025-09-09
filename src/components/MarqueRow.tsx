@@ -52,14 +52,14 @@ export default function MarqueeRow({
                 className="flex items-center gap-2 md:gap-4 whitespace-nowrap"
               >
                 <Image
-                  className="md:w-[28px]"
+                  className="md:w-[28px] 3xl:w-[34px]"
                   src={item.iconsrc}
                   alt={item.name}
                   width={17}
                   height={17}
                 />
                 <p
-                  className={`${inter.className} font-medium text-xs sm:text-sm md:text-base text-[var(--color-text-secondary)]`}
+                  className={`${inter.className} font-medium text-xs sm:text-sm md:text-base 3xl:text-lg text-[var(--color-text-secondary)]`}
                 >
                   {item.name}
                 </p>

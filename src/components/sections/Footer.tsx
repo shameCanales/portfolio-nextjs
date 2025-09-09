@@ -42,7 +42,7 @@ export default function Footer() {
 
   return (
     <div
-      className={`mt-10 text-center sm:text-left pt-1 sm:pt-5 pb-8 px-5 sm:px-8 md:px-12 lg:px-18 xl:px-[120px] 2xl:px-[200px] bg-[var(--color-card)] ${
+      className={`mt-10 text-center sm:text-left pt-1 sm:pt-5 pb-8 px-5 sm:px-8 md:px-12 lg:px-18 xl:px-[120px] 2xl:px-[200px] 3xl:px-[220px] bg-[var(--color-card)] ${
         theme === "dark" ? "border-t-[.5px] border-[var(--color-border)]" : ""
       }`}
     >

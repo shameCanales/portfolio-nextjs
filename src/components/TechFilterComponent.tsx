@@ -78,13 +78,13 @@ export default function TechFilterComponent() {
       : techStack.filter((t) => t.category === selectedCategory);
 
   return (
-    <div className="w-full mt-5 lg:mb-35 2xl:mb-25">
-      <div className="flex overflow-x-auto gap-7 sm:gap-10 lg:gap-16 2xl:gap-20  justify-center-safe lg:rounded-xl  py-2 scrollbar-hide mx-[-20px] md:mx-[-48px] sm:mx-[-32px]  lg:mx-0 xl:mt-10 px-6 bg-[var(--color-card)]">
+    <div className="w-full mt-5 lg:mb-35 2xl:mb-25 3xl:mb-40">
+      <div className="flex overflow-x-auto gap-7 sm:gap-10 lg:gap-16 2xl:gap-15 justify-center-safe lg:rounded-xl py-2 3xl:py-3 scrollbar-hide mx-[-20px] md:mx-[-48px] sm:mx-[-32px] lg:mx-0 2xl xl:mt-10 2xl:w-[910px] 3xl:w-[1100px] 2xl:mx-auto px-6 bg-[var(--color-card)]">
         {categories.map((cat) => (
           <button
             key={cat.name}
             onClick={() => setSelectedCategory(cat.name)}
-            className={`whitespace-nowrap  rounded-md text-xs md:text-sm lg:text-base transition-colors
+            className={`whitespace-nowrap  rounded-md text-xs md:text-sm lg:text-base 3xl:text-lg transition-colors
               ${
                 selectedCategory === cat.name
                   ? "bg-[var(--color-bg)] text-[var(--color-text)] px-6 py-2 font-medium"
@@ -96,7 +96,7 @@ export default function TechFilterComponent() {
         ))}
       </div>
 
-      <div className="2xl:bg-[#050B20] lg:p-10 lg:px-15 pt-8 lg:mt-6 xl:mt-10 lg:rounded-xl ">
+      <div className="lg:bg-[#050B20] lg:p-10 lg:px-15 pt-8 lg:mt-6 xl:mt-10 2xl:mx-auto 2xl:w-[910px] 3xl:w-[1100px] lg:rounded-xl ">
         <div className="flex content-start flex-wrap gap-3 lg:gap-4 lg:pt-0 justify-center h-[370px] sm:h-[260px] lg:h-[200px] xl:h-[220px] xl:w-[820px] xl:mx-auto xl:my-auto">
           {filteredTechs.map((tech) => (
             <div
