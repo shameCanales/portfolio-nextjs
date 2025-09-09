@@ -28,38 +28,40 @@ export default function FeaturedProjectItem({ project }: { project: Project }) {
 
   return (
     <div
-      className={`absolute 2xl:static cursor-pointer w-[260px] sm:w-[320px] lg:w-[366px] backdrop-blur-md bg-[var(--color-card)] rounded-lg lg:rounded-2xl p-3.5 text-left  ${
+      className={`absolute 2xl:static cursor-pointer w-[260px] sm:w-[320px] lg:w-[366px] 3xl:w-[480px] backdrop-blur-md bg-[var(--color-card)] rounded-lg lg:rounded-2xl p-3.5 3xl:p-8 text-left  ${
         theme === "dark" ? "border-[0.5px] border-[var(--color-border)]" : ""
       }`}
     >
       <Image
-        className="rounded-lg sm:w-[283px] lg:w-[351px] mx-auto"
+        className="rounded-lg sm:w-[283px] lg:w-[351px] 3xl:w-[411px] mx-auto"
         src={project.src}
         alt={project.description}
         width="228"
         height="130"
       />
-      <p className={`font-bold text-sm lg:text-base mt-4 lg:mt-5`}>
+      <p
+        className={`font-bold text-sm lg:text-base 3xl:text-lg mt-4 lg:mt-5 3xl:mt-6`}
+      >
         {project.title}
       </p>
       <p
-        className={`text-xs lg:text-sm text-[var(--color-text-secondary)] leading-4.5 lg:leading-normal mt-2 sm:mt-1 font-normal ${inter.className}`}
+        className={`text-xs lg:text-sm 3xl:text-base text-[var(--color-text-secondary)] leading-4.5 3xl:leading-normal lg:leading-normal mt-2 sm:mt-1 2xl:mt-2 font-normal ${inter.className}`}
       >
         {project.description}
       </p>
 
-      <ul className="mt-3 lg:mt-5">
+      <ul className="mt-3 lg:mt-5 3xl:mt-6">
         {project.features.map((feat) => (
-          <div key={feat} className="flex items-start mt-0.5 sm:mt-1.5">
+          <div key={feat} className="flex items-start 3xl:items-center mt-0.5 sm:mt-1.5">
             <Image
-              className="sm:w-[18px] lg:w-[21px]"
+              className="sm:w-[18px] lg:w-[21px] 3xl:w-[25px]"
               src="/checklist.png"
               alt="checklist icon"
               width="15"
               height="15"
             />
             <p
-              className={`text-xs lg:text-sm text-[var(--color-text-secondary)] leading-4.5 ml-2 font-normal ${inter.className}`}
+              className={`text-xs lg:text-sm 3xl:text-base text-[var(--color-text-secondary)] leading-4.5 ml-2 3xl:ml-3 font-normal ${inter.className}`}
             >
               {feat}
             </p>
@@ -67,21 +69,21 @@ export default function FeaturedProjectItem({ project }: { project: Project }) {
         ))}
       </ul>
 
-      <ul className="mt-4 sm:mt-5 flex flex-wrap gap-2 sm:gap-3">
+      <ul className="mt-4 sm:mt-5 3xl:mt-7 flex flex-wrap gap-2 sm:gap-3">
         {project.techUsed.map((tech) => (
           <p
             key={tech}
-            className={`bg-[var(--color-accent)] inline py-1 px-2 rounded-2xl text-[#FFFCEE] text-xs font-light ${inter.className}`}
+            className={`bg-[var(--color-accent)] inline py-1 3xl:py-1.5 px-2 3xl:px-3 rounded-2xl text-[#FFFCEE] text-xs font-light ${inter.className}`}
           >
             {tech}
           </p>
         ))}
       </ul>
 
-      <div className="flex gap-2 mt-7">
+      <div className="flex gap-2 3xl:gap-6 mt-7 3xl:mt-12">
         <Link href={project.liveLink}>
           <Image
-            className="sm:w-[18px] 2xl:w-[21px]"
+            className="sm:w-[18px] 2xl:w-[21px] 3xl:w-[27px]"
             src={`/${theme === "dark" ? "dark" : "light"}-mode/external.png`}
             alt="go to live link"
             width="12"
@@ -90,7 +92,7 @@ export default function FeaturedProjectItem({ project }: { project: Project }) {
         </Link>
         <Link href={project.liveLink}>
           <Image
-            className="sm:w-[18px]"
+            className="sm:w-[18px] 3xl:w-[27px]"
             src={`/${theme === "dark" ? "dark" : "light"}-mode/github-logo.png`}
             alt="go to live link"
             width="12"
