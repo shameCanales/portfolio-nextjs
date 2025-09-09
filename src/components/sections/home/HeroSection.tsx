@@ -48,11 +48,11 @@ export default function HeroSection() {
   return (
     <div className="lg:flex lg:gap-2 lg:justify-between lg:mt-35">
       <Image
-        className="mx-auto lg:mx-0 lg:self-start rounded-full sm:w-[207px] lg:w-[340px] 2xl:w-[410px] mt-15 md:mt-14 lg:mt-0 lg:order-2"
+        className="mx-auto lg:mx-0 lg:self-start rounded-full w-[120px] sm:w-[207px] lg:w-[340px] 2xl:w-[410px] mt-15 md:mt-14 lg:mt-0 lg:order-2"
         src="/profile.png"
         alt="Profile picture"
-        width="120"
-        height="120"
+        width="750"
+        height="750"
       />
 
       <div className="mt-10 md:mt-14 lg:mt-0 text-center lg:text-left lg:order-1">

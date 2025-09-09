@@ -28,7 +28,7 @@ export default function NavBar() {
 
   return (
     <div
-      className={`sticky top-4.5 z-11 shadow-md flex justify-between items-center px-3 2xl:px-7 py-1 sm:py-2 sm:mt-8 mx-5 sm:mx-8 md:mx-12 lg:mx-[72px] xl:mx-[120px] 2xl:mx-[200px] rounded-sm sm:rounded-lg xl:rounded-[10px] 2xl:rounded-[13px] backdrop-blur-xs bg-[var(--color-card)] ${
+      className={`3xl:w-[1180px] 3xl:mx-auto sticky top-4.5 z-11 shadow-md flex justify-between items-center px-3 2xl:px-7 py-1 sm:py-2 sm:mt-8 mx-5 sm:mx-8 md:mx-12 lg:mx-[72px] xl:mx-[120px] 2xl:mx-[200px] rounded-sm sm:rounded-lg xl:rounded-[10px] 2xl:rounded-[13px] backdrop-blur-xs bg-[var(--color-card)] ${
         theme === "dark" ? "border-[.5px] border-[rgba(255,255,255,.2)]" : ""
       }`}
     >
