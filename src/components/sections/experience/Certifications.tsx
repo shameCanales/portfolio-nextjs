@@ -1,24 +1,24 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import MainHeading from "../../ui/MainHeading";
 import MainParagraph from "../../ui/MainParagraph";
 import CertificationItem from "../../CertificationItem";
 import { certificationsData } from "@/lib/data";
 
 export default function Certification() {
-  // Motion variants for the container
-  const containerVariants = {
+  // Container variants for staggered children
+  const containerVariants: Variants = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.2, // stagger the children animation
+        staggerChildren: 0.2, // stagger each certification item
       },
     },
   };
 
-  // Motion variants for each item
-  const itemVariants = {
+  // Individual item animation
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
   };
@@ -28,19 +28,18 @@ export default function Certification() {
       className="mt-30 sm:mt-25 lg:mt-28 xl:mt-32 3xl:mt-50"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }} // animate when 20% visible
+      viewport={{ once: true, amount: 0.2 }} // trigger when 20% visible
     >
+      {/* Main Heading */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        variants={itemVariants}
       >
         <MainHeading>Certifications</MainHeading>
       </motion.div>
 
+      {/* Paragraph */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        variants={itemVariants}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
       >
         <MainParagraph>
@@ -50,12 +49,10 @@ export default function Certification() {
         </MainParagraph>
       </motion.div>
 
+      {/* Certifications List */}
       <motion.ul
         className="mt-10 xl:mt-20 md:grid md:gap-5 md:grid-cols-2 2xl:grid-cols-3"
         variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
       >
         {certificationsData.map((cert, index) => (
           <motion.li key={index} variants={itemVariants}>
