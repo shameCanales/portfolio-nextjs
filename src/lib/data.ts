@@ -113,23 +113,22 @@ export const allProjects: Project[] = [
   },
   {
     id: 3,
-    src: "/projects/WebDesignUdemy.jpg",
-    title: "Fakestore App 3",
+    src: "/projThumbnails/portfoliov1.png",
+    title: "Portfolio Website with Vite",
     description:
-      "A modern e-commerce platform built with React that simulates real-world shopping experiences using the FakeStore API. Designed with performance, scalability, and user experience in mind, it showcases advanced state management, routing, and UI techniques.",
+      "a modern, responsive developer portfolio built with React, Vite, Tailwind CSS, Redux Toolkit, TanStack Query, and Framer Motion. It showcases my projects, skills, and experiences with a clean UI, smooth animations, and performance-focused design. Deployed on Vercel, it highlights both my frontend expertise and my passion for building scalable, interactive web applications.",
     features: [
-      "Implemented dynamic product browsing with search, filtering, and category-based navigation.",
-      "Developed Role-based authentication with protected routes for admin and customer.",
-      "Enhanced product display using an interactive image carousel and pagination.",
-      "Improved user engagement with responsive UI, toast notifications, and smooth navigation.",
+      "Component-driven architecture for easy scalability",
+      "A modern, responsive UI that adapts beautifully accross devices",
+      "A polished, professional design that aligns with my developer identity",
     ],
     techstack: [
-      { name: "React 1", src: "/logos/reactjs.png" },
-      { name: "React 2", src: "/logos/reactjs.png" },
-      { name: "React 3", src: "/logos/reactjs.png" },
-      { name: "React 4", src: "/logos/reactjs.png" },
-      { name: "React 5", src: "/logos/reactjs.png" },
-      { name: "React 6", src: "/logos/reactjs.png" },
+      { name: "React", src: "/logos/reactjs.png" },
+      { name: "Vite", src: "/logos/vite.png" },
+      { name: "Redux Toolkit", src: "/logos/redux.png" },
+      { name: "Tanstack Query", src: "/logos/tanstack.png" },
+      { name: "Git", src: "/logos/git.png" },
+      { name: "Github", src: "/logos/github.png" },
     ],
   },
 ];
@@ -191,25 +190,27 @@ export const featuredProjects: FeatProject[] = [
   },
   {
     id: 3,
-    src: "/projects/WebDesignUdemy.jpg",
-    title: "Fakestore App 3",
+    src: "/projThumbnails/portfoliov1.png",
+    title: "Portfolio Website with Vite",
     description:
-      "Built frontend for FakeStore App and integrated the Fakestore Platzi API. 3",
+      "Modern responsive portfolio showcasing projects, skills, and experiences with React, Tailwind, and Framer Motion.",
     features: [
-      "Implemented component-based architecture 3",
-      "Used tailwind classes to style components",
-      "Used Redux Toolkit to manage global state.",
+      "Component-driven architecture for easy scalability",
+      "A modern, responsive UI that adapts beautifully accross devices",
+      "A polished, professional design that aligns with my developer identity",
     ],
     techUsed: [
-      "React JS 3",
-      "Tailwind CSS",
-      "Redux Toolkit",
-      "React Router V7",
+      "ReactJS",
       "Vite",
+      "Redux Toolkit",
+      "Tanstack Query",
+      "Git",
+      "Github",
     ],
-    liveLink: "#",
-    githubRepoLink: "#",
+    liveLink: "https://shame-canales-portfolio-v1.vercel.app/",
+    githubRepoLink: "https://github.com/shameCanales/shame-portfolio",
   },
+  
 ];
 
 //Marque

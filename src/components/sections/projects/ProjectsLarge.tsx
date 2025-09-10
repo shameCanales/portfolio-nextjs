@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Poppins, Outfit } from "next/font/google";
+import { motion, AnimatePresence } from "framer-motion";
 import TechItemProject from "@/components/ui/TechItemProject";
 import { allProjects } from "@/lib/data";
 
@@ -20,8 +21,6 @@ const outfit = Outfit({
 
 export default function FeatureProjectsCarousel() {
   const [current, setCurrent] = useState(0);
-
-  // Ref for cards
   const cardRefs = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
@@ -37,15 +36,9 @@ export default function FeatureProjectsCarousel() {
     );
 
     const currentCards = cardRefs.current;
-
-    currentCards.forEach((card) => {
-      if (card) observer.observe(card);
-    });
-
+    currentCards.forEach((card) => card && observer.observe(card));
     return () => {
-      currentCards.forEach((card) => {
-        if (card) observer.unobserve(card);
-      });
+      currentCards.forEach((card) => card && observer.unobserve(card));
     };
   }, []);
 
@@ -53,11 +46,11 @@ export default function FeatureProjectsCarousel() {
 
   return (
     <div className="hidden lg:block xl:mt-25">
-      <div className="grid grid-cols-2 w-full mt-12 xlmt:mt20 gap-12  px-6">
+      <div className="grid grid-cols-2 w-full mt-12 xlmt:mt20 gap-12 px-6">
         {/* Cards list */}
         <div className="flex flex-col gap-15 xl:gap-25 3xl:gap-35 w-full pb-40">
           {allProjects.map((project, index) => (
-            <div
+            <motion.div
               key={project.id}
               ref={(el) => {
                 if (el) cardRefs.current[index] = el;
@@ -69,6 +62,9 @@ export default function FeatureProjectsCarousel() {
                     ? "shadow-[0_0_25px_rgba(59,130,246,0.7)] border-2 border-blue-500"
                     : "shadow-lg bg-gray-800 dark:bg-gray-700"
                 }`}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: index === current ? 1.05 : 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
             >
               <Image
                 src={project.src}
@@ -77,45 +73,55 @@ export default function FeatureProjectsCarousel() {
                 height={420}
                 className="w-full h-full object-cover"
               />
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Info panel */}
         <div className="w-full 2xl:w-[515px] sticky top-24 2xl:top-44 3xl:top-60 self-start 2xl:pb-40">
-          <h2
-            className={`text-xl xl:text-2xl font-bold text-[var(--color-text)] ${poppins.className}`}
-          >
-            {activeProj.title}
-          </h2>
-          <p
-            className={`mt-2 text-sm leading-normal text-[var(--color-text-secondary)] ${outfit.className}`}
-          >
-            {activeProj.description}
-          </p>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeProj.id}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            >
+              <h2
+                className={`text-xl xl:text-2xl font-bold text-[var(--color-text)] ${poppins.className}`}
+              >
+                {activeProj.title}
+              </h2>
+              <p
+                className={`mt-2 text-sm leading-normal text-[var(--color-text-secondary)] ${outfit.className}`}
+              >
+                {activeProj.description}
+              </p>
 
-          <ul className="mt-3 space-y-3">
-            {activeProj.features.map((feat, i) => (
-              <li key={i} className="flex items-start gap-2">
-                <Image
-                  className="mt-0.5"
-                  src="/checklist.png"
-                  alt="check"
-                  width={20}
-                  height={20}
-                />
-                <p className={`text-sm leading-normal ${outfit.className}`}>
-                  {feat}
-                </p>
-              </li>
-            ))}
-          </ul>
+              <ul className="mt-3 space-y-3">
+                {activeProj.features.map((feat, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <Image
+                      className="mt-0.5"
+                      src="/checklist.png"
+                      alt="check"
+                      width={20}
+                      height={20}
+                    />
+                    <p className={`text-sm leading-normal ${outfit.className}`}>
+                      {feat}
+                    </p>
+                  </li>
+                ))}
+              </ul>
 
-          <ul className="flex flex-wrap gap-3 mt-6">
-            {activeProj.techstack.map((tech) => (
-              <TechItemProject key={tech.name} tech={tech} />
-            ))}
-          </ul>
+              <ul className="flex flex-wrap gap-3 mt-6">
+                {activeProj.techstack.map((tech) => (
+                  <TechItemProject key={tech.name} tech={tech} />
+                ))}
+              </ul>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </div>

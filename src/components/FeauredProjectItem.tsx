@@ -33,7 +33,7 @@ export default function FeaturedProjectItem({ project }: { project: Project }) {
       }`}
     >
       <Image
-        className="rounded-lg sm:w-[283px] lg:w-[351px] 3xl:w-[411px] mx-auto"
+        className="rounded-lg sm:w-[283px] lg:w-[351px] 3xl:w-[411px] mx-auto aspect-video"
         src={project.src}
         alt={project.description}
         width="228"
@@ -52,9 +52,12 @@ export default function FeaturedProjectItem({ project }: { project: Project }) {
 
       <ul className="mt-3 lg:mt-5 3xl:mt-6">
         {project.features.map((feat) => (
-          <div key={feat} className="flex items-start 3xl:items-center mt-0.5 sm:mt-1.5">
+          <div
+            key={feat}
+            className="flex items-start 3xl:items-center mt-0.5 sm:mt-1.5"
+          >
             <Image
-              className="sm:w-[18px] lg:w-[21px] 3xl:w-[25px]"
+              className="w-[15px] h-[15px] sm:w-[18px] sm:h-[18px] lg:w-[21px] lg:h-[21px] 3xl:w-[25px] 3xl:h-[25px] aspect-square"
               src="/checklist.png"
               alt="checklist icon"
               width="15"
