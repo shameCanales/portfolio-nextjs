@@ -45,7 +45,7 @@ export default function TechFilterComponent() {
       </div>
 
       {/* Tech Items */}
-      <div className="lg:bg-[#050B20] lg:p-10 lg:px-15 pt-8 lg:mt-6 xl:mt-10 2xl:mx-auto 2xl:w-[910px] 3xl:w-[1100px] lg:rounded-xl ">
+      <div className="bg-[#050B20] p-5 lg:p-10 lg:px-15 pt-8 lg:mt-6 xl:mt-10 mx-[-20px] sm:mx-[-32px] md:mx-[-48px] 2xl:mx-auto 2xl:w-[910px] 3xl:w-[1100px] lg:rounded-xl ">
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedCategory} // 👈 forces re-render when category changes
@@ -77,10 +77,10 @@ export default function TechFilterComponent() {
                   visible: { opacity: 1, y: 0 },
                   exit: { opacity: 0, y: -20 },
                 }}
-                className={`flex items-center gap-2 px-2 py-2 rounded-sm lg:rounded-lg  ${
+                className={`flex items-center gap-2 px-2 py-2 rounded-sm lg:rounded-lg border-[0.5px] border-[rgba(255,255,255,0.29)]  ${
                   theme === "dark"
-                    ? "border-[0.5px] border-[rgba(255,255,255,0.29)]"
-                    : " bg-[rgba(255,266,266,0.29)] text-[var(--color-bg)]"
+                    ? ""
+                    : " text-[var(--color-bg)]"
                 }`}
               >
                 <Image
