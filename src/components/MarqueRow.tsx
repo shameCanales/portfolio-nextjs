@@ -52,7 +52,7 @@ export default function MarqueeRow({
                 className="flex items-center gap-2 md:gap-4 whitespace-nowrap"
               >
                 <Image
-                  className="md:w-[28px] 3xl:w-[34px]"
+                  className="md:w-[28px] 3xl:w-[34px] 3xl:h-[34px] aspect-square"
                   src={item.iconsrc}
                   alt={item.name}
                   width={17}

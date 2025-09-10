@@ -1,37 +1,7 @@
-
+import { education } from "@/lib/data";
 import EducationCard from "@/components/EducationCard";
 import AboutTitles from "@/components/ui/AboutTitle";
 
-export const education = [
-  {
-    title: "Tertiary Education",
-    schoolName: "Romblon State University - SFC",
-    course: "Bachelor of Science in Information Technology",
-    schoolYear: "S.Y. 2021-2025",
-    address: "Poblacion, San Fernando, Romblon",
-  },
-  {
-    title: "Secondary Education - Senior",
-    schoolName: "Don Carlos M. Mejias Memorial NHS",
-    course: "Information Communication Technology",
-    schoolYear: "S.Y. 2019-2021",
-    address: "Panangcalan, San Fernando, Romblon",
-  },
-  {
-    title: "Secondary Education - Junior",
-    schoolName: "Don Carlos M. Mejias Memorial NHS",
-    course: "",
-    schoolYear: "S.Y. 2015-2019",
-    address: "Panangcalan, San Fernando, Romblon",
-  },
-  {
-    title: "Primary Education",
-    schoolName: "Campalingo Elementary School",
-    course: "",
-    schoolYear: "S.Y. 2008-2015",
-    address: "Campalingo, San Fernando, Romblon",
-  },
-];
 
 export default function Education() {
   return (

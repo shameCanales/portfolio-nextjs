@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, PanInfo } from "framer-motion";
 import { Poppins, Outfit } from "next/font/google";
 import TechItemProject from "@/components/ui/TechItemProject";
+import { allProjects } from "@/lib/data";
 
 const poppins = Poppins({
   weight: ["700", "800", "900"],
@@ -18,87 +19,6 @@ const outfit = Outfit({
   display: "swap",
 });
 
-interface TechStackItem {
-  name: string;
-  src: string;
-}
-
-interface Project {
-  id: number;
-  src: string;
-  title: string;
-  description: string;
-  features: string[];
-  techstack: TechStackItem[];
-}
-
-const featuredProjects: Project[] = [
-  {
-    id: 1,
-    src: "/projects/WebDesignUdemy.jpg",
-    title: "Fakestore React App",
-    description:
-      "A modern e-commerce platform built with React that simulates real-world shopping experiences using the FakeStore API. Designed with performance, scalability, and user experience in mind, it showcases advanced state management, routing, and UI techniques.",
-    features: [
-      "Implemented dynamic product browsing with search, filtering, and category-based navigation.",
-      "Developed Role-based authentication with protected routes for admin and customer.",
-      "Enhanced product display using an interactive image carousel and pagination.",
-      "Improved user engagement with responsive UI, toast notifications, and smooth navigation.",
-    ],
-    techstack: [
-      { name: "React", src: "/logos/reactjs.png" },
-      { name: "TailwindCSS", src: "/logos/reactjs.png" },
-      { name: "Redux Toolkit", src: "/logos/reactjs.png" },
-      { name: "React Router V7", src: "/logos/reactjs.png" },
-      { name: "React Fakestore API", src: "/logos/reactjs.png" },
-      { name: "TypeScript", src: "/logos/reactjs.png" },
-      { name: "Tanstack Query", src: "/logos/reactjs.png" },
-    ],
-  },
-  {
-    id: 2,
-    src: "/projects/WebDesignUdemy.jpg",
-    title: "Fakestore App 2",
-    description:
-      "A modern e-commerce platform built with React that simulates real-world shopping experiences using the FakeStore API. Designed with performance, scalability, and user experience in mind, it showcases advanced state management, routing, and UI techniques.",
-    features: [
-      "Implemented dynamic product browsing with search, filtering, and category-based navigation.",
-      "Developed Role-based authentication with protected routes for admin and customer.",
-      "Enhanced product display using an interactive image carousel and pagination.",
-      "Improved user engagement with responsive UI, toast notifications, and smooth navigation.",
-    ],
-    techstack: [
-      { name: "React", src: "/logos/reactjs.png" },
-      { name: "React 2 ", src: "/logos/reactjs.png" },
-      { name: "Reac 3t", src: "/logos/reactjs.png" },
-      { name: "React 4", src: "/logos/reactjs.png" },
-      { name: "React 5", src: "/logos/reactjs.png" },
-      { name: "React6 ", src: "/logos/reactjs.png" },
-    ],
-  },
-  {
-    id: 3,
-    src: "/projects/WebDesignUdemy.jpg",
-    title: "Fakestore App 3",
-    description:
-      "A modern e-commerce platform built with React that simulates real-world shopping experiences using the FakeStore API. Designed with performance, scalability, and user experience in mind, it showcases advanced state management, routing, and UI techniques.",
-    features: [
-      "Implemented dynamic product browsing with search, filtering, and category-based navigation.",
-      "Developed Role-based authentication with protected routes for admin and customer.",
-      "Enhanced product display using an interactive image carousel and pagination.",
-      "Improved user engagement with responsive UI, toast notifications, and smooth navigation.",
-    ],
-    techstack: [
-      { name: "React 1", src: "/logos/reactjs.png" },
-      { name: "React 2", src: "/logos/reactjs.png" },
-      { name: "React 3", src: "/logos/reactjs.png" },
-      { name: "React 4", src: "/logos/reactjs.png" },
-      { name: "React 5", src: "/logos/reactjs.png" },
-      { name: "React 6", src: "/logos/reactjs.png" },
-    ],
-  },
-];
-
 export default function FeatureProjectsCarousel() {
   const [current, setCurrent] = useState(0);
 
@@ -107,7 +27,7 @@ export default function FeatureProjectsCarousel() {
     info: PanInfo
   ) => {
     const threshold = 50; // minimal drag distance
-    if (info.offset.x < -threshold && current < featuredProjects.length - 1) {
+    if (info.offset.x < -threshold && current < allProjects.length - 1) {
       setCurrent((prev) => prev + 1);
     } else if (info.offset.x > threshold && current > 0) {
       setCurrent((prev) => prev - 1);
@@ -132,13 +52,13 @@ export default function FeatureProjectsCarousel() {
     return () => window.removeEventListener("resize", updateOffset);
   }, []);
 
-  const activeProj = featuredProjects[current];
+  const activeProj = allProjects[current];
 
   return (
     <div className="lg:hidden">
       <div className=" flex-col items-center w-full mt-8 sm:mt-12">
         <div className="relative flex w-full overflow-hidden h-[180px] md:h-[280px]">
-          {featuredProjects.map((project, index) => {
+          {allProjects.map((project, index) => {
             const isCenter = index === current;
             const offset = (index - current) * cardOffset; // card width + gap
 

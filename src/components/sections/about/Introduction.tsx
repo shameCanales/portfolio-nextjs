@@ -10,27 +10,27 @@ export default function Introduction() {
         <SectionSubheading>An Aspiring Frontend Engineer</SectionSubheading>
         <div className="md:mt-6 2xl:mt-10">
           <IntroParagraph>
-          I&apos;m a fresh IT graduate and self-taught developer passionate
-          about turning ideas into interactive, user-friendly web experiences.
-          With certifications in React, JavaScript, HTML, CSS, and UI/UX design,
-          I&apos;ve built a strong foundation for creating clean,
-          component-driven interfaces that perform beautifully across devices.
-          Currently, I&apos;m focused on mastering frontend development with
-          React, Next.js, Tailwind CSS, Redux Toolkit, and TanStack Query, while
-          also exploring backend technologies to become a well-rounded
-          developer.
-        </IntroParagraph>
+            I&apos;m a fresh IT graduate and self-taught developer passionate
+            about turning ideas into interactive, user-friendly web experiences.
+            With certifications in React, JavaScript, HTML, CSS, and UI/UX
+            design, I&apos;ve built a strong foundation for creating clean,
+            component-driven interfaces that perform beautifully across devices.
+            Currently, I&apos;m focused on mastering frontend development with
+            React, Next.js, Tailwind CSS, Redux Toolkit, and TanStack Query,
+            while also exploring backend technologies to become a well-rounded
+            developer.
+          </IntroParagraph>
 
-        <IntroParagraph>
-          I thrive at the intersection of design and development—crafting sleek,
-          minimalist UIs that balance creativity and functionality. From leading
-          the development of a Web-Based Water Billing Management System as a
-          capstone project to building hands-on personal projects, I enjoy
-          solving real-world problems, writing clean reusable code, and
-          continuously sharpening my skills. Driven by curiosity and
-          consistency, I aim to contribute, grow, and create meaningful digital
-          solutions one project at a time.
-        </IntroParagraph>
+          <IntroParagraph>
+            I thrive at the intersection of design and development—crafting
+            sleek, minimalist UIs that balance creativity and functionality.
+            From leading the development of a Web-Based Water Billing Management
+            System as a capstone project to building hands-on personal projects,
+            I enjoy solving real-world problems, writing clean reusable code,
+            and continuously sharpening my skills. Driven by curiosity and
+            consistency, I aim to contribute, grow, and create meaningful
+            digital solutions one project at a time.
+          </IntroParagraph>
         </div>
       </div>
     </div>
