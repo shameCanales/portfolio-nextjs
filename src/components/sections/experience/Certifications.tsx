@@ -51,7 +51,7 @@ export default function Certification() {
 
       {/* Certifications List */}
       <motion.ul
-        className="mt-10 xl:mt-20 md:grid md:gap-5 md:grid-cols-2 2xl:grid-cols-3"
+        className="mt-10 xl:mt-20 md:grid md:gap-5 md:grid-cols-2 md:items-stretch 2xl:grid-cols-3"
         variants={containerVariants}
       >
         {certificationsData.map((cert, index) => (

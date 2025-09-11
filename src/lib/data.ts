@@ -210,7 +210,6 @@ export const featuredProjects: FeatProject[] = [
     liveLink: "https://shame-canales-portfolio-v1.vercel.app/",
     githubRepoLink: "https://github.com/shameCanales/shame-portfolio",
   },
-  
 ];
 
 //Marque
@@ -471,10 +470,10 @@ export const certificationsData: Certification[] = [
       "https://www.udemy.com/certificate/UC-8f474679-6550-48ba-85d6-c17204a7e028/",
   },
   {
-    thumbnail: "/certThumbnails/react.webp",
-    title: "React - The Complete Guide 2025 (Includes Next.js, Redux)",
+    thumbnail: "/certThumbnails/javascript.png",
+    title: "The Completed JavaScript Course 2024: From Zero to Expert!",
     description:
-      "Comprehensive training on modern React development covering core concepts, hooks, state management with redux, and fullstack application development with Next.js.",
+      "A 70-hour project-based course teaching JavaScript from beginner to advanced, covering ES6+, async programming, OOP, and real-world projects.",
     did: [
       "Built a fullstack web app using React and Next.js",
       "Implemented Authentication and Protected Routes",
@@ -482,69 +481,39 @@ export const certificationsData: Certification[] = [
       "Designed responsive UIs with Tailwindcss",
       "Integrated REST APIs and handled async data fetching",
     ],
-    learned: [
-      "ReactJS",
-      "TailwindCSS",
-      "Redux Toolkit",
-      "React Router V7",
-      "Jest",
-      "NextJS",
-      "APIs",
-      "Tanstack Query",
-      "Framer Motion",
+    learned: ["Javascript ES6+", "HTML", "CSS", "DOM"],
+    certLink:
+      "https://www.udemy.com/certificate/UC-3e25f926-9033-4b8e-8b71-afb344cbcab4/",
+  },
+  {
+    thumbnail: "/certThumbnails/html.jpg",
+    title: "Build Responsive Real-World Websites with HTML and CSS",
+    description:
+      "A hands-on course teaching modern HTML and CSS, focusing on responsive design, Flexbox, Grid layouts, and building professional websites.",
+    did: [
+      "Learn modern HTML and CSS fundamentals.",
+      "Build fully responsive websites for all devices.",
+      "Master layouts using Flexbox and CSS Grid.",
+      "Apply professional design principles and typography.",
+      "Work on real-world projects with clean, organized code.",
     ],
+    learned: ["HTML5", "CSS3", "Responsive Web Design", "Flexbox", "Grid"],
     certLink:
       "https://www.udemy.com/certificate/UC-8f474679-6550-48ba-85d6-c17204a7e028/",
   },
   {
-    thumbnail: "/certThumbnails/react.webp",
-    title: "React - The Complete Guide 2025 (Includes Next.js, Redux)",
+    thumbnail: "/certThumbnails/design.jpg",
+    title: "Web Design for Web Developers: Build Beautiful Websites!",
     description:
-      "Comprehensive training on modern React development covering core concepts, hooks, state management with redux, and fullstack application development with Next.js.",
+      "A beginner-friendly course on web design fundamentals, covering color theory, typography, spacing, layout, and visual hierarchy for creating visually appealing websites.",
     did: [
-      "Built a fullstack web app using React and Next.js",
-      "Implemented Authentication and Protected Routes",
-      "Managed global state with Redux Toolkit and Tanstack",
-      "Designed responsive UIs with Tailwindcss",
-      "Integrated REST APIs and handled async data fetching",
+      "Learn the core principles of modern web design.",
+      "Understand how to use color theory and typography effectively.",
+      "Apply spacing, alignment, and visual hierarchy for better layouts.",
+      "Explore responsive and user-friendly design practices.",
+      "Build beautiful, professional-looking websites with practical examples.",
     ],
-    learned: [
-      "ReactJS",
-      "TailwindCSS",
-      "Redux Toolkit",
-      "React Router V7",
-      "Jest",
-      "NextJS",
-      "APIs",
-      "Tanstack Query",
-      "Framer Motion",
-    ],
-    certLink:
-      "https://www.udemy.com/certificate/UC-8f474679-6550-48ba-85d6-c17204a7e028/",
-  },
-  {
-    thumbnail: "/certThumbnails/react.webp",
-    title: "React - The Complete Guide 2025 (Includes Next.js, Redux)",
-    description:
-      "Comprehensive training on modern React development covering core concepts, hooks, state management with redux, and fullstack application development with Next.js.",
-    did: [
-      "Built a fullstack web app using React and Next.js",
-      "Implemented Authentication and Protected Routes",
-      "Managed global state with Redux Toolkit and Tanstack",
-      "Designed responsive UIs with Tailwindcss",
-      "Integrated REST APIs and handled async data fetching",
-    ],
-    learned: [
-      "ReactJS",
-      "TailwindCSS",
-      "Redux Toolkit",
-      "React Router V7",
-      "Jest",
-      "NextJS",
-      "APIs",
-      "Tanstack Query",
-      "Framer Motion",
-    ],
+    learned: ["HTML5", "CSS3", "Design Fundamentals", "Responsive Design"],
     certLink:
       "https://www.udemy.com/certificate/UC-8f474679-6550-48ba-85d6-c17204a7e028/",
   },

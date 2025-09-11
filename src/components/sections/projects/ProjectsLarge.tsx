@@ -24,21 +24,31 @@ export default function FeatureProjectsCarousel() {
   const cardRefs = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.find((entry) => entry.isIntersecting);
-        if (visible) {
-          const idx = Number(visible.target.getAttribute("data-index"));
-          setCurrent(idx);
-        }
-      },
-      { threshold: 1 }
-    );
+    const handleScroll = () => {
+      let closestIdx = 0;
+      let closestDistance = Infinity;
 
-    const currentCards = cardRefs.current;
-    currentCards.forEach((card) => card && observer.observe(card));
+      cardRefs.current.forEach((card, index) => {
+        if (!card) return;
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.top + rect.height / 2;
+        const screenCenter = window.innerHeight / 2;
+        const distance = Math.abs(cardCenter - screenCenter);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIdx = index;
+        }
+      });
+
+      setCurrent(closestIdx);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Run once on mount
+
     return () => {
-      currentCards.forEach((card) => card && observer.unobserve(card));
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -46,9 +56,9 @@ export default function FeatureProjectsCarousel() {
 
   return (
     <div className="hidden lg:block xl:mt-25">
-      <div className="grid grid-cols-2 w-full mt-12 xlmt:mt20 gap-12 px-6">
+      <div className="grid grid-cols-2 w-full mt-12 xl:mt-20 gap-12 px-6 ">
         {/* Cards list */}
-        <div className="flex flex-col gap-15 xl:gap-25 3xl:gap-35 w-full pb-40">
+        <div className="flex flex-col gap-15 xl:gap-25 3xl:gap-35 w-full pb-50">
           {allProjects.map((project, index) => (
             <motion.div
               key={project.id}
