@@ -19,7 +19,7 @@ export default function GoalCard({ title, description }: CardProps) {
   const theme = useSelector((state: RootState) => state.theme.theme);
   return (
     <div
-      className={`rounded-md sm:rounded-xl md:rounded-xl 3xl:rounded-2xl text-center mt-3 sm:mt-0 p-5 lg:p-6 sm:py-4  sm:px-3 md:px-8 3xl:px-10 ${
+      className={`rounded-md sm:rounded-xl md:rounded-xl 3xl:rounded-2xl text-center mt-3 sm:mt-0 p-5 lg:p-6 sm:py-4  sm:px-3 md:px-8 3xl:px-10 h-full ${
         theme === "dark" ? "border-[var(--color-border)] border-[.5px]" : ""
       } bg-[var(--color-card)]`}
     >

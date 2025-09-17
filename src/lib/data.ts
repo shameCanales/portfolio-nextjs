@@ -90,27 +90,27 @@ export const allProjects: Project[] = [
       { name: "Tanstack Query", src: "/logos/reactjs.png" },
     ],
   },
-  {
-    id: 2,
-    src: "/projects/WebDesignUdemy.jpg",
-    title: "Fakestore App 2",
-    description:
-      "A modern e-commerce platform built with React that simulates real-world shopping experiences using the FakeStore API. Designed with performance, scalability, and user experience in mind, it showcases advanced state management, routing, and UI techniques.",
-    features: [
-      "Implemented dynamic product browsing with search, filtering, and category-based navigation.",
-      "Developed Role-based authentication with protected routes for admin and customer.",
-      "Enhanced product display using an interactive image carousel and pagination.",
-      "Improved user engagement with responsive UI, toast notifications, and smooth navigation.",
-    ],
-    techstack: [
-      { name: "React", src: "/logos/reactjs.png" },
-      { name: "React 2 ", src: "/logos/reactjs.png" },
-      { name: "Reac 3t", src: "/logos/reactjs.png" },
-      { name: "React 4", src: "/logos/reactjs.png" },
-      { name: "React 5", src: "/logos/reactjs.png" },
-      { name: "React6 ", src: "/logos/reactjs.png" },
-    ],
-  },
+  // {
+  //   id: 2,
+  //   src: "/projects/WebDesignUdemy.jpg",
+  //   title: "Fakestore App 2",
+  //   description:
+  //     "A modern e-commerce platform built with React that simulates real-world shopping experiences using the FakeStore API. Designed with performance, scalability, and user experience in mind, it showcases advanced state management, routing, and UI techniques.",
+  //   features: [
+  //     "Implemented dynamic product browsing with search, filtering, and category-based navigation.",
+  //     "Developed Role-based authentication with protected routes for admin and customer.",
+  //     "Enhanced product display using an interactive image carousel and pagination.",
+  //     "Improved user engagement with responsive UI, toast notifications, and smooth navigation.",
+  //   ],
+  //   techstack: [
+  //     { name: "React", src: "/logos/reactjs.png" },
+  //     { name: "React 2 ", src: "/logos/reactjs.png" },
+  //     { name: "Reac 3t", src: "/logos/reactjs.png" },
+  //     { name: "React 4", src: "/logos/reactjs.png" },
+  //     { name: "React 5", src: "/logos/reactjs.png" },
+  //     { name: "React6 ", src: "/logos/reactjs.png" },
+  //   ],
+  // },
   {
     id: 3,
     src: "/projThumbnails/portfoliov1.png",
@@ -149,13 +149,13 @@ export const featuredProjects: FeatProject[] = [
   {
     id: 1,
     src: "/projects/WebDesignUdemy.jpg",
-    title: "Fakestore App",
+    title: "Fakestore React E-Commerce App",
     description:
-      "Built frontend for FakeStore App and integrated the Fakestore Platzi API.",
+      "Built a modern e-commerce application with React, Redux Toolkit, and Fakestore API, featuring search, cart management, authentication, and protected routes.",
     features: [
-      "Implemented component-based architecture",
-      "Used tailwind classes to style components",
-      "Used Redux Toolkit to manage global state.",
+      "Implemented scalable component-based architecture for modular development.",
+      "Managed global state efficiently using Redux Toolkit and TypeScript.",
+      "Added role-based authentication with protected routes for users.",
     ],
     techUsed: [
       "React JS",
@@ -167,37 +167,37 @@ export const featuredProjects: FeatProject[] = [
     liveLink: "#",
     githubRepoLink: "#",
   },
-  {
-    id: 2,
-    src: "/projects/WebDesignUdemy.jpg",
-    title: "Fakestore App 2",
-    description:
-      "Built frontend for FakeStore App and integrated the Fakestore Platzi API.",
-    features: [
-      "Implemented component-based architecture",
-      "Used tailwind classes to style components",
-      "Used Redux Toolkit to manage global state.",
-    ],
-    techUsed: [
-      "React JS",
-      "Tailwind CSS",
-      "Redux Toolkit",
-      "React Router V7",
-      "Vite",
-    ],
-    liveLink: "#",
-    githubRepoLink: "#",
-  },
+  // {
+  //   id: 2,
+  //   src: "/projects/WebDesignUdemy.jpg",
+  //   title: "React Fakestore Shopping Platform",
+  //   description:
+  //     "Developed an interactive online storefront with React and Fakestore API, delivering responsive browsing, cart persistence, authentication, and user feedback.",
+  //   features: [
+  //     "Built fully responsive layouts using Tailwind CSS utility classes.",
+  //     "Implemented cart synchronization and state updates via Redux Toolkit.",
+  //     "Enhanced user experience with toast notifications and smooth navigation.",
+  //   ],
+  //   techUsed: [
+  //     "React JS",
+  //     "Tailwind CSS",
+  //     "Redux Toolkit",
+  //     "React Router V7",
+  //     "Vite",
+  //   ],
+  //   liveLink: "#",
+  //   githubRepoLink: "#",
+  // },
   {
     id: 3,
     src: "/projThumbnails/portfoliov1.png",
-    title: "Portfolio Website with Vite",
+    title: "Personal Portfolio Website Project",
     description:
-      "Modern responsive portfolio showcasing projects, skills, and experiences with React, Tailwind, and Framer Motion.",
+      "Designed and deployed a responsive personal portfolio showcasing skills, experience, and projects with React, Vite, Tailwind CSS, and Framer Motion.",
     features: [
-      "Component-driven architecture for easy scalability",
-      "A modern, responsive UI that adapts beautifully accross devices",
-      "A polished, professional design that aligns with my developer identity",
+      "Developed modular reusable components for consistency and scalability.",
+      "Integrated Framer Motion to deliver smooth animations and transitions.",
+      "Crafted responsive layouts optimized for mobile, tablet, and desktop.",
     ],
     techUsed: [
       "ReactJS",
@@ -407,7 +407,6 @@ export const experiences: Experience[] = [
     address: "Quezon City, Metro Manila",
     where: "ComWorks Inc.",
     description: [
-      "proposed a redesign and modernization of company website as my practice project, applying web development knowledge and showcasing initiative beyond assigned tasks.",
       "Collaborated with the IT team in software updates, OS reinstallation, and preventive maintenance, reinforcing system security and operational continuity.",
       "Streamlined documentation and asset management through Draw.io and inventory systems, improving tracking efficiency and maintaining organized IT resources.",
       "Provided remote IT support using RRM tools and AnyDesk, resolving connectivity and software issues for on-site and remote employees, enhancing productivity company-wide.",

@@ -57,7 +57,7 @@ export default function FeatureProjectsCarousel() {
   return (
     <div
       ref={containerRef}
-      className="flex 2xl:hidden items-center justify-center w-full h-135 lg:h-140 relative overflow-hidden z-1 lg:mt-3"
+      className="flex 2xl:hidden items-center justify-center w-full h-165 lg:h-170 relative overflow-hidden z-1 lg:mt-3"
     >
       {featuredProjects.map((project, index) => {
         const isCenter = index === current;

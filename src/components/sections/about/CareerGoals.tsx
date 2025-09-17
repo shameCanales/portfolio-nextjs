@@ -39,7 +39,7 @@ export default function CareerGoals() {
 
       {/* Cards Grid */}
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 md:gap-4 mt-4 sm:mt-6 md:mt-8 2xl:mt-12"
+        className="grid grid-cols-1 items-stretch sm:grid-cols-2 2xl:grid-cols-4 md:gap-4 mt-4 sm:mt-6 md:mt-8 2xl:mt-12"
         variants={containerVariants}
       >
         {careerGoals.map((goal) => (
@@ -47,6 +47,7 @@ export default function CareerGoals() {
             key={goal.title}
             variants={itemVariants}
             viewport={{ once: true, amount: 1 }} // each card animates when fully visible
+       
           >
             <GoalCard title={goal.title} description={goal.desc} />
           </motion.div>
