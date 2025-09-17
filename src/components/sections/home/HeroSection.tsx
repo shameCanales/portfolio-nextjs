@@ -6,6 +6,7 @@ import DownLoadResumeButton from "@/components/DownloadResumeButton";
 import SeeMyWorkButton from "@/components/SeeMyWorkButton";
 import { Inter } from "next/font/google";
 import HeroSocialsItem from "@/components/ui/HeroSocialsItem";
+import { socialsIcon } from "@/lib/data";
 
 const inter = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -13,39 +14,6 @@ const inter = Inter({
   display: "swap",
 });
 
-interface SocialIconLinks {
-  filename: string;
-  alt: string;
-  href: string;
-}
-
-const socialsIcon: SocialIconLinks[] = [
-  {
-    filename: "linkedin.png",
-    alt: "Linkedin Icon social",
-    href: "#",
-  },
-  {
-    filename: "github.png",
-    alt: "Github Icon social",
-    href: "#",
-  },
-  {
-    filename: "email.png",
-    alt: "Email Icon social",
-    href: "#",
-  },
-  {
-    filename: "facebook.png",
-    alt: "Facebook Icon social",
-    href: "#",
-  },
-  {
-    filename: "phone-call.png",
-    alt: "Phone Icon social",
-    href: "#09813030091",
-  },
-];
 
 export default function HeroSection() {
   return (

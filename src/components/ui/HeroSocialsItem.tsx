@@ -14,7 +14,7 @@ export default function HeroSocialsItem({ item }: { item: SocialsProps }) {
   const theme = useSelector((state: RootState) => state.theme.theme);
 
   return (
-    <a href={item.href}>
+    <a href={item.href} target="_blank" rel="noopener noreferrer">
       <Image
         className="w-[26px] lg:w-[34px] 2xl:w-[40px]"
         src={`/${theme === "dark" ? "dark" : "light"}-mode/footer-socials/${

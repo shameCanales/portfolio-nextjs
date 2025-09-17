@@ -550,3 +550,37 @@ export const education = [
     address: "Campalingo, San Fernando, Romblon",
   },
 ];
+
+interface SocialIconLinks {
+  filename: string;
+  alt: string;
+  href: string;
+}
+
+export const socialsIcon: SocialIconLinks[] = [
+  {
+    filename: "linkedin.png",
+    alt: "Linkedin Icon social",
+    href: "https://www.linkedin.com/in/mark-aron-shame-canales-284261284/",
+  },
+  {
+    filename: "github.png",
+    alt: "Github Icon social",
+    href: "https://github.com/shameCanales",
+  },
+  {
+    filename: "email.png",
+    alt: "Email Icon social",
+    href: "mailto:shamecanales1082@gmail.com",
+  },
+  {
+    filename: "facebook.png",
+    alt: "Facebook Icon social",
+    href: "https://www.facebook.com/shame.canales",
+  },
+  {
+    filename: "phone-call.png",
+    alt: "Phone Icon social",
+    href: "tel:+639813030091",
+  },
+];

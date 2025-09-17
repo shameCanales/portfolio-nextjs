@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import type { RootState } from "@/lib/store/store";
 import { Poppins } from "next/font/google";
 import { motion, Variants, easeOut } from "framer-motion";
+import { socialsIcon } from "@/lib/data";
 
 const poppins = Poppins({
   weight: ["400", "500", "600"],
@@ -15,13 +16,7 @@ const poppins = Poppins({
   display: "swap",
 });
 
-const socialLinks = [
-  { filename: "linkedin.png", link: "#" },
-  { filename: "github.png", link: "#" },
-  { filename: "email.png", link: "#" },
-  { filename: "facebook.png", link: "#" },
-  { filename: "phone-call.png", link: "09813030091" },
-];
+
 
 // ✅ Use easing functions instead of strings
 const containerVariants: Variants = {
@@ -90,13 +85,13 @@ export default function Footer() {
         <motion.div variants={itemVariants}>
           <FooterTitle>Connect with Me</FooterTitle>
           <ul className="flex justify-center sm:justify-start mt-4 gap-3 lg:gap-4">
-            {socialLinks.map((soc, index) => (
+            {socialsIcon.map((soc, index) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.15, rotate: 2 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <FooterSocialLinks filename={soc.filename} link={soc.link} />
+                <FooterSocialLinks filename={soc.filename} link={soc.href} />
               </motion.div>
             ))}
           </ul>
