@@ -65,12 +65,14 @@ interface Project {
   description: string;
   features: string[];
   techstack: TechStackItem[];
+  liveLink: string;
+  githubRepoLink: string;
 }
 
 export const allProjects: Project[] = [
   {
     id: 1,
-    src: "/projects/WebDesignUdemy.jpg",
+    src: "/projThumbnails/square-fakestore.png",
     title: "Fakestore React App",
     description:
       "A modern e-commerce platform built with React that simulates real-world shopping experiences using the FakeStore API. Designed with performance, scalability, and user experience in mind, it showcases advanced state management, routing, and UI techniques.",
@@ -82,38 +84,20 @@ export const allProjects: Project[] = [
     ],
     techstack: [
       { name: "React", src: "/logos/reactjs.png" },
-      { name: "TailwindCSS", src: "/logos/reactjs.png" },
-      { name: "Redux Toolkit", src: "/logos/reactjs.png" },
-      { name: "React Router V7", src: "/logos/reactjs.png" },
+      { name: "TailwindCSS", src: "/logos/tailwindcss.png" },
+      { name: "Redux Toolkit", src: "/logos/redux.png" },
+      { name: "React Router V7", src: "/logos/reactrouter.png" },
       { name: "React Fakestore API", src: "/logos/reactjs.png" },
-      { name: "TypeScript", src: "/logos/reactjs.png" },
-      { name: "Tanstack Query", src: "/logos/reactjs.png" },
+      { name: "TypeScript", src: "/logos/typescriptLogo.png" },
+      { name: "Tanstack Query", src: "/logos/tanstack.png" },
     ],
+    liveLink: "https://fakestore-app-react.vercel.app/",
+    githubRepoLink: "https://github.com/shameCanales/Fakestore_App_React",
   },
-  // {
-  //   id: 2,
-  //   src: "/projects/WebDesignUdemy.jpg",
-  //   title: "Fakestore App 2",
-  //   description:
-  //     "A modern e-commerce platform built with React that simulates real-world shopping experiences using the FakeStore API. Designed with performance, scalability, and user experience in mind, it showcases advanced state management, routing, and UI techniques.",
-  //   features: [
-  //     "Implemented dynamic product browsing with search, filtering, and category-based navigation.",
-  //     "Developed Role-based authentication with protected routes for admin and customer.",
-  //     "Enhanced product display using an interactive image carousel and pagination.",
-  //     "Improved user engagement with responsive UI, toast notifications, and smooth navigation.",
-  //   ],
-  //   techstack: [
-  //     { name: "React", src: "/logos/reactjs.png" },
-  //     { name: "React 2 ", src: "/logos/reactjs.png" },
-  //     { name: "Reac 3t", src: "/logos/reactjs.png" },
-  //     { name: "React 4", src: "/logos/reactjs.png" },
-  //     { name: "React 5", src: "/logos/reactjs.png" },
-  //     { name: "React6 ", src: "/logos/reactjs.png" },
-  //   ],
-  // },
+
   {
-    id: 3,
-    src: "/projThumbnails/portfoliov1.png",
+    id: 2,
+    src: "/projThumbnails/square-portfolio-v1.png",
     title: "Portfolio Website with Vite",
     description:
       "a modern, responsive developer portfolio built with React, Vite, Tailwind CSS, Redux Toolkit, TanStack Query, and Framer Motion. It showcases my projects, skills, and experiences with a clean UI, smooth animations, and performance-focused design. Deployed on Vercel, it highlights both my frontend expertise and my passion for building scalable, interactive web applications.",
@@ -124,12 +108,37 @@ export const allProjects: Project[] = [
     ],
     techstack: [
       { name: "React", src: "/logos/reactjs.png" },
+      { name: "React Router V7", src: "/logos/reactrouter.png" },
       { name: "Vite", src: "/logos/vite.png" },
       { name: "Redux Toolkit", src: "/logos/redux.png" },
       { name: "Tanstack Query", src: "/logos/tanstack.png" },
       { name: "Git", src: "/logos/git.png" },
       { name: "Github", src: "/logos/github.png" },
     ],
+    liveLink: "https://shame-canales-portfolio-v1.vercel.app/",
+    githubRepoLink: "https://github.com/shameCanales/shame-portfolio",
+  },
+  {
+    id: 3,
+    src: "/projThumbnails/square-money-go.png",
+    title: "MoneyGo Expense Tracker App",
+    description:
+      "Developed a lightweight expense tracker using React, Redux Toolkit, and Tailwind CSS that allows users to log incomes, record expenses, and monitor their balance effortlessly. I built MoneyGo to track my own spending habits and understand where my money goes—hence the name.",
+    features: [
+      "Enabled users to add income and expense entries with instant updates.",
+      "Used Redux Toolkit for managing and persisting financial records.",
+      "Provided clear balance overview with categorized transaction history.",
+    ],
+    techstack: [
+      { name: "React", src: "/logos/reactjs.png" },
+      { name: "Vite", src: "/logos/vite.png" },
+      { name: "Redux Toolkit", src: "/logos/redux.png" },
+      { name: "TailwindCSS", src: "/logos/tailwindcss.png" },
+      { name: "Git", src: "/logos/git.png" },
+      { name: "Github", src: "/logos/github.png" },
+    ],
+    liveLink: "https://money-go.vercel.app/",
+    githubRepoLink: "https://github.com/shameCanales/money-go",
   },
 ];
 
@@ -148,7 +157,7 @@ interface FeatProject {
 export const featuredProjects: FeatProject[] = [
   {
     id: 1,
-    src: "/projects/WebDesignUdemy.jpg",
+    src: "/projThumbnails/rect-fakestore.png",
     title: "Fakestore React E-Commerce App",
     description:
       "Built a modern e-commerce application with React, Redux Toolkit, and Fakestore API, featuring search, cart management, authentication, and protected routes.",
@@ -164,33 +173,13 @@ export const featuredProjects: FeatProject[] = [
       "React Router V7",
       "Vite",
     ],
-    liveLink: "#",
-    githubRepoLink: "#",
+    liveLink: "https://fakestore-app-react.vercel.app/",
+    githubRepoLink: "https://github.com/shameCanales/Fakestore_App_React",
   },
-  // {
-  //   id: 2,
-  //   src: "/projects/WebDesignUdemy.jpg",
-  //   title: "React Fakestore Shopping Platform",
-  //   description:
-  //     "Developed an interactive online storefront with React and Fakestore API, delivering responsive browsing, cart persistence, authentication, and user feedback.",
-  //   features: [
-  //     "Built fully responsive layouts using Tailwind CSS utility classes.",
-  //     "Implemented cart synchronization and state updates via Redux Toolkit.",
-  //     "Enhanced user experience with toast notifications and smooth navigation.",
-  //   ],
-  //   techUsed: [
-  //     "React JS",
-  //     "Tailwind CSS",
-  //     "Redux Toolkit",
-  //     "React Router V7",
-  //     "Vite",
-  //   ],
-  //   liveLink: "#",
-  //   githubRepoLink: "#",
-  // },
+
   {
-    id: 3,
-    src: "/projThumbnails/portfoliov1.png",
+    id: 2,
+    src: "/projThumbnails/rect-portfolio-v1.png",
     title: "Personal Portfolio Website Project",
     description:
       "Designed and deployed a responsive personal portfolio showcasing skills, experience, and projects with React, Vite, Tailwind CSS, and Framer Motion.",
@@ -209,6 +198,27 @@ export const featuredProjects: FeatProject[] = [
     ],
     liveLink: "https://shame-canales-portfolio-v1.vercel.app/",
     githubRepoLink: "https://github.com/shameCanales/shame-portfolio",
+  },
+  {
+    id: 3,
+    src: "/projThumbnails/rect-moneygo.png",
+    title: "MoneyGo Expense Tracker App",
+    description:
+      "Built a simple expense tracker with React, Redux Toolkit, and Tailwind CSS, enabling users to add incomes, record expenses, and view their balance clearly.",
+    features: [
+      "Enabled users to add income and expense entries with instant updates.",
+      "Used Redux Toolkit for managing and persisting financial records.",
+      "Provided clear balance overview with categorized transaction history.",
+    ],
+    techUsed: [
+      "React JS",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "React Router V7",
+      "Vite",
+    ],
+    liveLink: "https://money-go.vercel.app/",
+    githubRepoLink: "https://github.com/shameCanales/money-go",
   },
 ];
 

@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/lib/store/store";
 import Link from "next/link";
 import { Inter } from "next/font/google";
+import ProjectLinks from "./ProjectLinks";
 
 const inter = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -52,10 +53,7 @@ export default function FeaturedProjectItem({ project }: { project: Project }) {
 
       <ul className="mt-3 lg:mt-5 3xl:mt-6">
         {project.features.map((feat) => (
-          <div
-            key={feat}
-            className="flex items-start 3xl:items-center mt-0.5 sm:mt-1.5"
-          >
+          <div key={feat} className="flex items-start mt-0.5 sm:mt-1.5">
             <Image
               className="w-[15px] h-[15px] sm:w-[18px] sm:h-[18px] lg:w-[21px] lg:h-[21px] 3xl:w-[25px] 3xl:h-[25px] aspect-square"
               src="/checklist.png"
@@ -64,7 +62,7 @@ export default function FeaturedProjectItem({ project }: { project: Project }) {
               height="15"
             />
             <p
-              className={`text-xs lg:text-sm 3xl:text-base text-[var(--color-text-secondary)] leading-4.5 ml-2 3xl:ml-3 font-normal ${inter.className}`}
+              className={`text-xs lg:text-sm 3xl:text-base text-[var(--color-text-secondary)] leading-normal ml-2 3xl:ml-3 font-normal ${inter.className}`}
             >
               {feat}
             </p>
@@ -83,25 +81,12 @@ export default function FeaturedProjectItem({ project }: { project: Project }) {
         ))}
       </ul>
 
-      <div className="flex gap-2 3xl:gap-6 mt-7 3xl:mt-12">
-        <Link href={project.liveLink}>
-          <Image
-            className="sm:w-[18px] 2xl:w-[21px] 3xl:w-[27px]"
-            src={`/${theme === "dark" ? "dark" : "light"}-mode/external.png`}
-            alt="go to live link"
-            width="12"
-            height="12"
-          />
-        </Link>
-        <Link href={project.liveLink}>
-          <Image
-            className="sm:w-[18px] 3xl:w-[27px]"
-            src={`/${theme === "dark" ? "dark" : "light"}-mode/github-logo.png`}
-            alt="go to live link"
-            width="12"
-            height="12"
-          />
-        </Link>
+      <div className=" pt-7 3xl:pt-12">
+        <ProjectLinks
+          liveLink={project.liveLink}
+          githubRepoLink={project.githubRepoLink}
+          theme={theme}
+        />
       </div>
     </div>
   );

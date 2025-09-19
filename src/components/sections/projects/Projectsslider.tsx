@@ -6,6 +6,9 @@ import { motion, PanInfo } from "framer-motion";
 import { Poppins, Outfit } from "next/font/google";
 import TechItemProject from "@/components/ui/TechItemProject";
 import { allProjects } from "@/lib/data";
+import ProjectLinks from "@/components/ProjectLinks";
+import { useSelector } from "react-redux";
+import { RootState } from "@/lib/store/store";
 
 const poppins = Poppins({
   weight: ["700", "800", "900"],
@@ -21,6 +24,7 @@ const outfit = Outfit({
 
 export default function FeatureProjectsCarousel() {
   const [current, setCurrent] = useState(0);
+  const theme = useSelector((state: RootState) => state.theme.theme);
 
   const handleDragEnd = (
     _: MouseEvent | TouchEvent | PointerEvent,
@@ -128,11 +132,17 @@ export default function FeatureProjectsCarousel() {
             ))}
           </ul>
 
-          <ul className="flex content-start flex-wrap gap-1.5 sm:gap-2.5 justify-start h-[130px] mt-5">
+          <ul className="flex content-start flex-wrap gap-1.5 sm:gap-2.5 justify-start h-[100px] mt-5">
             {activeProj.techstack.map((tech) => (
               <TechItemProject key={tech.name} tech={tech} />
             ))}
           </ul>
+
+          <ProjectLinks
+            liveLink={activeProj.liveLink}
+            githubRepoLink={activeProj.githubRepoLink}
+            theme={theme}
+          />
         </div>
       </div>
     </div>

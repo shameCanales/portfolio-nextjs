@@ -6,6 +6,9 @@ import { Poppins, Outfit } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
 import TechItemProject from "@/components/ui/TechItemProject";
 import { allProjects } from "@/lib/data";
+import ProjectLinks from "@/components/ProjectLinks";
+import { useSelector } from "react-redux";
+import { RootState } from "@/lib/store/store";
 
 const poppins = Poppins({
   weight: ["700", "800", "900"],
@@ -20,6 +23,7 @@ const outfit = Outfit({
 });
 
 export default function FeatureProjectsCarousel() {
+  const theme = useSelector((state: RootState) => state.theme.theme);
   const [current, setCurrent] = useState(0);
   const cardRefs = useRef<HTMLDivElement[]>([]);
 
@@ -130,6 +134,13 @@ export default function FeatureProjectsCarousel() {
                   <TechItemProject key={tech.name} tech={tech} />
                 ))}
               </ul>
+              <div className="mt-6">
+                <ProjectLinks
+                  liveLink={activeProj.liveLink}
+                  githubRepoLink={activeProj.githubRepoLink}
+                  theme={theme}
+                />
+              </div>
             </motion.div>
           </AnimatePresence>
         </div>
