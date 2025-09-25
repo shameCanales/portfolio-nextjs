@@ -82,12 +82,12 @@ export default function NavBar() {
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.6 }}
-        className="flex"
+        className="flex gap-1"
       >
         <ThemeToggle />
         <ToggleMobileNav>
           <Image
-            className="md:hidden w-[16px] sm:w-[20px]"
+            className="md:hidden w-[23px] sm:w-[20px]"
             src={`/${theme}-mode/menu.png`}
             alt="toggle mobile menu"
             width="250"
